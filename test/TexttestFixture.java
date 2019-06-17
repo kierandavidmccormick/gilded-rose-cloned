@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class TexttestFixture {
     public static void main(String[] args) {
         System.out.println("OMGHAI!");
@@ -41,7 +44,8 @@ public class TexttestFixture {
                         )
                 )
         };
-        GildedRose app = new GildedRose(itemData);
+        GildedRose app = new GildedRose();
+        app.addItems(Arrays.asList(itemData));
 
         int days = 2;
         if (args.length > 0) {

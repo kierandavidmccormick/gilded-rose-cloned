@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
 class GildedRose {
     /*
     Item[] items;
@@ -6,10 +9,27 @@ class GildedRose {
         this.items = items;
     }
      */
-    ItemData[] items;
+    private ArrayList<ItemData> items;
+    private int itemId = 0;
 
-    public  GildedRose(ItemData[] items) {
-        this.items = items;
+    public void addItem(ItemData item) {
+        items.add(item);
+        item.setItemId(itemId);
+        itemId++;
+    }
+
+    public void addItems(Collection<ItemData> items) {
+        for (ItemData item : items) {
+            addItem(item);
+        }
+    }
+
+    public  GildedRose(Collection<ItemData> items) {
+        this.items = new ArrayList<>(items);
+    }
+
+    public GildedRose() {
+        items = new ArrayList<>();
     }
 
     public void updateQuality() {
