@@ -52,6 +52,7 @@ public class TexttestFixture {
             System.out.println("-------- day " + i + " --------");
             System.out.println("name, sellIn, quality");
             for (ItemData item : itemData) {
+                System.out.println("\n");
                 System.out.println(item);
             }
             System.out.println();
