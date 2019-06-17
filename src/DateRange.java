@@ -19,11 +19,11 @@ public class DateRange {
         return qualityChange;
     }
 
-    public void setQualityChange(int qualityChange) {
+    public void setQualityChange(long qualityChange) {
         this.qualityChange = qualityChange;
     }
 
-    public DateRange(int startDay, int endDay, int qualityChange) {
+    public DateRange(int startDay, int endDay, long qualityChange) {
         this.startDay = startDay;
         this.endDay = endDay;
         this.qualityChange = qualityChange;
@@ -33,4 +33,9 @@ public class DateRange {
     private int endDay;
     //this is long to ensure that the entirety of the quality range can be reached by a single day's update
     private long qualityChange;
+
+    @Override
+    public String toString() {
+        return "StartDay: " + startDay + ",  EndDay: " + endDay + ",  QualityChange: " + qualityChange;
+    }
 }

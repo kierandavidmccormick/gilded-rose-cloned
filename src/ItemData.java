@@ -23,7 +23,7 @@ public class ItemData {
     private Item item;
     private SellByInfo sellByInfo;
 
-    void updateItem() {
+    public void updateItem() {
         long uncappedQuality = item.quality + sellByInfo.getQualityChange(item.sellIn);
         if (uncappedQuality < sellByInfo.getMinQuality()) {
             uncappedQuality = sellByInfo.getMinQuality();
@@ -34,5 +34,10 @@ public class ItemData {
         if (item.sellIn > 0) {
             item.sellIn--;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Item info:\n" + item.toString() + "\n\nSales info:\n" + sellByInfo.toString();
     }
 }

@@ -1,17 +1,25 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class SellByInfo {
-    public SellByInfo(ArrayList<DateRange> dateRanges, int maxQuality, int minQuality) {
+    public SellByInfo(DateRange[] dateRanges, int maxQuality, int minQuality) {
         this.dateRanges = dateRanges;
         this.maxQuality = maxQuality;
         this.minQuality = minQuality;
     }
 
-    public ArrayList<DateRange> getDateRanges() {
+    public SellByInfo(DateRange dateRange, int maxQuality, int minQuality) {
+        //DateRange[] dateRanges = {dateRange};
+        //there has to be a better way to do this
+        this(Collections.singletonList(dateRange).toArray(DateRange[]::new), maxQuality, minQuality);
+    }
+
+    public DateRange[] getDateRanges() {
         return dateRanges;
     }
 
-    public void setDateRanges(ArrayList<DateRange> dateRanges) {
+    public void setDateRanges(DateRange[] dateRanges) {
         this.dateRanges = dateRanges;
     }
 
@@ -31,7 +39,7 @@ public class SellByInfo {
         this.minQuality = minQuality;
     }
 
-    private ArrayList<DateRange> dateRanges;
+    private DateRange[] dateRanges;
     private int maxQuality;
     private int minQuality;
 
@@ -45,5 +53,19 @@ public class SellByInfo {
             }
         }
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        String string = "";
+        for (DateRange dateRange : dateRanges) {
+            if (dateRange == null) {
+                string += "null\n";
+            } else {
+                string += dateRange.toString() + "\n";
+            }
+        }
+        string += "Max quality: " + maxQuality + ",  Min quality: " + minQuality;
+        return  string;
     }
 }
