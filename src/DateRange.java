@@ -38,4 +38,12 @@ public class DateRange {
     public String toString() {
         return "StartDay: " + startDay + ",  EndDay: " + endDay + ",  QualityChange: " + qualityChange;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || !o.getClass().equals(this.getClass())) {
+            return false;
+        }
+        return ((DateRange)o).getStartDay() == startDay && ((DateRange)o).getEndDay() == endDay && ((DateRange)o).getQualityChange() == qualityChange;
+    }
 }

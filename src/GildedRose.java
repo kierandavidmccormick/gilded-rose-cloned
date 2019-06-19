@@ -18,7 +18,7 @@ class GildedRose {
         itemId++;
     }
 
-    public void addItems(Collection<ItemData> items) {
+    public void addItems(Iterable<ItemData> items) {
         for (ItemData item : items) {
             addItem(item);
         }
@@ -85,6 +85,7 @@ class GildedRose {
             }
         }
          */
+
         for (ItemData item : items) {
             item.updateItem();
         }

@@ -48,7 +48,7 @@ public class SellByInfo {
             return  0;
         }
         for (DateRange dateRange : dateRanges) {
-            if (dateRange.getStartDay() <= date && dateRange.getEndDay() >= date) {
+            if (dateRange.getStartDay() >= date && dateRange.getEndDay() <= date) {
                 return dateRange.getQualityChange();
             }
         }
@@ -57,15 +57,23 @@ public class SellByInfo {
 
     @Override
     public String toString() {
-        String string = "";
+        StringBuilder string = new StringBuilder();
         for (DateRange dateRange : dateRanges) {
             if (dateRange == null) {
-                string += "null\n";
+                string.append("null\n");
             } else {
-                string += dateRange.toString() + "\n";
+                string.append(dateRange.toString()).append("\n");
             }
         }
-        string += "Max quality: " + maxQuality + ",  Min quality: " + minQuality;
-        return  string;
+        string.append("Max quality: ").append(maxQuality).append(",  Min quality: ").append(minQuality);
+        return string.toString();
+    }
+
+    @Override
+    public boolean equals (Object o) {
+        if (o == null || !o.getClass().equals(this.getClass())) {
+            return false;
+        }
+        return Arrays.deepEquals(((SellByInfo)o).getDateRanges(), dateRanges) && ((SellByInfo)o).getMaxQuality() == maxQuality && ((SellByInfo)o).getMinQuality() == minQuality;
     }
 }

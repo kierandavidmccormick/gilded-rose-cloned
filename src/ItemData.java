@@ -11,7 +11,7 @@ public class ItemData {
         this.item = new Item(name, sellIn, quality);
         DateRange[] dateRangeArray = new DateRange[numberOfDateRanges];
         for (int i = 0; i < numberOfDateRanges; i++) {
-            dateRangeArray[i] = new DateRange(dateRanges[i], dateRanges[i + 1], dateRanges[i + 2]);
+            dateRangeArray[i] = new DateRange(dateRanges[i * 3], dateRanges[i * 3 + 1], dateRanges[i * 3 + 2]);
         }
 
         sellByInfo = new SellByInfo(dateRangeArray, maxQuality, minQuality);
@@ -25,7 +25,7 @@ public class ItemData {
         int lowVal = Integer.MAX_VALUE;
         int highVal = Integer.MIN_VALUE;
         for (DateRange dateRange : dateRanges) {
-            if (dateRange.getStartDay() > dateRange.getEndDay()) {
+            if (dateRange.getStartDay() < dateRange.getEndDay()) {
                 return false;
             }
             if (dateRange.getStartDay() == lowVal || dateRange.getStartDay() == highVal || dateRange.getEndDay() == lowVal || dateRange.getEndDay() == highVal) {
@@ -80,13 +80,23 @@ public class ItemData {
             uncappedQuality = sellByInfo.getMaxQuality();
         }
         item.quality = (int) uncappedQuality;
-        if (item.sellIn > 0) {
+        try {
             item.sellIn--;
+        } catch (ArithmeticException e) {
+            item.sellIn = Integer.MIN_VALUE;
         }
     }
 
     @Override
     public String toString() {
         return "Item info:\n" + item.toString() + "\n\nSales info:\n" + sellByInfo.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || !o.getClass().equals(this.getClass())) {
+            return false;
+        }
+        return ((ItemData) o).getItem().toString().equals(item.toString()) && ((ItemData) o).getSellByInfo().equals(sellByInfo);
     }
 }
