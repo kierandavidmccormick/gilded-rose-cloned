@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb8c289-61a0-4ab2-bca7-4609a177e3d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/SellByInfoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DateRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DateRange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GildedRose.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SellByInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SellByInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GildedRoseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GildedRoseTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ItemDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TexttestFixture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ItemDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ItemDataTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,23 +18,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="1350">
+              <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3025#3026#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ItemLibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="300">
+              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding>
                 <element signature="e#0#2093#0" expanded="true" />
               </folding>
@@ -52,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/GildedRoseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="1635">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,18 +58,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ItemData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+            <state relative-caret-position="-975">
+              <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
               <folding>
-                <element signature="e#1999#2000#0" expanded="true" />
-                <element signature="e#2069#2070#0" expanded="true" />
-                <element signature="e#2143#2144#0" expanded="true" />
                 <element signature="e#2243#2244#0" expanded="true" />
-                <element signature="e#2281#2282#0" expanded="true" />
-                <element signature="e#2310#2311#0" expanded="true" />
-                <element signature="e#2351#2352#0" expanded="true" />
+                <element signature="e#2313#2314#0" expanded="true" />
                 <element signature="e#2387#2388#0" expanded="true" />
-                <element signature="e#3172#3173#0" expanded="true" />
+                <element signature="e#2487#2488#0" expanded="true" />
+                <element signature="e#2546#2547#0" expanded="true" />
+                <element signature="e#2623#2624#0" expanded="true" />
+                <element signature="e#3416#3417#0" expanded="true" />
+                <element signature="e#3743#3744#0" expanded="true" />
+                <element signature="e#3806#3807#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,18 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ItemDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-            </state>
+            <state relative-caret-position="-3" />
           </provider>
         </entry>
       </file>
@@ -165,12 +148,12 @@
         <option value="$PROJECT_DIR$/test/TexttestFixture.java" />
         <option value="$PROJECT_DIR$/test/SellByInfoTest.java" />
         <option value="$PROJECT_DIR$/src/DateRange.java" />
-        <option value="$PROJECT_DIR$/src/GildedRose.java" />
         <option value="$PROJECT_DIR$/src/SellByInfo.java" />
-        <option value="$PROJECT_DIR$/test/ItemDataTest.java" />
-        <option value="$PROJECT_DIR$/test/GildedRoseTest.java" />
-        <option value="$PROJECT_DIR$/src/ItemData.java" />
         <option value="$PROJECT_DIR$/src/ItemLibrary.java" />
+        <option value="$PROJECT_DIR$/test/GildedRoseTest.java" />
+        <option value="$PROJECT_DIR$/test/ItemDataTest.java" />
+        <option value="$PROJECT_DIR$/src/GildedRose.java" />
+        <option value="$PROJECT_DIR$/src/ItemData.java" />
       </list>
     </option>
   </component>
@@ -248,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GildedRoseTest.globalTest">
+  <component name="RunManager" selected="JUnit.All in gildedrose">
     <configuration name="TexttestFixture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TexttestFixture" />
       <module name="gildedrose" />
@@ -286,8 +269,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GildedRoseTest.globalTest" />
         <item itemvalue="JUnit.All in gildedrose" />
+        <item itemvalue="JUnit.GildedRoseTest.globalTest" />
         <item itemvalue="JUnit.ItemDataTest.validateDateRangesTest" />
         <item itemvalue="Application.TexttestFixture" />
       </list>
@@ -307,35 +290,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_gildedrose - 2019.06.19 at 16h 09m 39s.xml">
+    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 24m 03s.xml">
+      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 24m 24s.xml">
+      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 24m 31s.xml">
+      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 24m 47s.xml">
+      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 25m 18s.xml">
+      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 41m 27s.xml">
+      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_gildedrose - 2019.06.19 at 16h 41m 33s.xml">
       <configuration name="All in gildedrose" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_gildedrose - 2019.06.19 at 16h 09m 54s.xml">
+    <history-entry file="All_in_gildedrose - 2019.06.19 at 16h 42m 38s.xml">
       <configuration name="All in gildedrose" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_gildedrose - 2019.06.19 at 16h 10m 14s.xml">
+    <history-entry file="All_in_gildedrose - 2019.07.03 at 15h 12m 05s.xml">
       <configuration name="All in gildedrose" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_gildedrose - 2019.06.19 at 16h 10m 30s.xml">
+    <history-entry file="All_in_gildedrose - 2019.07.03 at 15h 19m 26s.xml">
       <configuration name="All in gildedrose" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 12m 45s.xml">
-      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 12m 49s.xml">
-      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 18m 48s.xml">
-      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 18m 52s.xml">
-      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 19m 48s.xml">
-      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_globalTest - 2019.06.19 at 16h 21m 48s.xml">
-      <configuration name="GildedRoseTest.globalTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -352,8 +335,8 @@
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3165644" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.40613496" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3165644" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.40613496" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -369,30 +352,6 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/ItemDataTest.java</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/GildedRoseTest.java</url>
-          <line>112</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ItemLibrary.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gildedrose.iml">
@@ -429,13 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SellByInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -452,13 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/SellByInfoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -466,45 +411,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ItemData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
-          <folding>
-            <element signature="e#1999#2000#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2143#2144#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-            <element signature="e#2281#2282#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
-            <element signature="e#2351#2352#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-            <element signature="e#3172#3173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ItemDataTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/GildedRoseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="1635">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -513,10 +423,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ItemLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="300">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding>
             <element signature="e#0#2093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ItemDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ItemData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-975">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2313#2314#0" expanded="true" />
+            <element signature="e#2387#2388#0" expanded="true" />
+            <element signature="e#2487#2488#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+            <element signature="e#2623#2624#0" expanded="true" />
+            <element signature="e#3416#3417#0" expanded="true" />
+            <element signature="e#3743#3744#0" expanded="true" />
+            <element signature="e#3806#3807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3025#3026#0" expanded="true" />
           </folding>
         </state>
       </provider>

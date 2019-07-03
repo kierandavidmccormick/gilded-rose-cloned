@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 class GildedRose {
     /*
@@ -29,7 +30,7 @@ class GildedRose {
     }
 
     public GildedRose() {
-        items = new ArrayList<>();
+        items = new ArrayList<ItemData>();
     }
 
     public void updateQuality() {
@@ -89,5 +90,9 @@ class GildedRose {
         for (ItemData item : items) {
             item.updateItem();
         }
+    }
+
+    private void printItems() {
+        Collections.sort(items);
     }
 }

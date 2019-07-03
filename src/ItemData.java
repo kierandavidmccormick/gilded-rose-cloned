@@ -1,4 +1,4 @@
-public class ItemData {
+public class ItemData implements Comparable<ItemData>{
     public ItemData(Item item, SellByInfo sellByInfo) {
         this.item = item;
         this.sellByInfo = sellByInfo;
@@ -17,28 +17,26 @@ public class ItemData {
         sellByInfo = new SellByInfo(dateRangeArray, maxQuality, minQuality);
     }
 
-    //TODO: more robust validation
     public static boolean validateDateRanges(DateRange[] dateRanges) {
         if (dateRanges == null || dateRanges.length == 0) {
             return false;
         }
-        int lowVal = Integer.MAX_VALUE;
-        int highVal = Integer.MIN_VALUE;
-        for (DateRange dateRange : dateRanges) {
-            if (dateRange.getStartDay() < dateRange.getEndDay()) {
+        if (dateRanges[dateRanges.length - 1].getEndDay() > dateRanges[dateRanges.length - 1].getStartDay()) {
+            return false;
+        }
+        for (int i = 0; i < dateRanges.length - 1; i++) {
+            if (dateRanges[i].getEndDay() > dateRanges[i].getStartDay()) {
                 return false;
             }
-            if (dateRange.getStartDay() == lowVal || dateRange.getStartDay() == highVal || dateRange.getEndDay() == lowVal || dateRange.getEndDay() == highVal) {
-                return false;
-            }
-            if ((dateRange.getStartDay() > lowVal && dateRange.getStartDay() < highVal) || (dateRange.getEndDay() > lowVal && dateRange.getEndDay() < highVal)) {
-                return false;
-            }
-            if (dateRange.getStartDay() > highVal) {
-                highVal = dateRange.getStartDay();
-            }
-            if (dateRange.getEndDay() < lowVal) {
-                lowVal = dateRange.getEndDay();
+            for (int j = i + 1; j < dateRanges.length; j++) {
+                //TODO: can these be simplified
+                //TODO: this might need more test coverage
+                if (dateRanges[i].getStartDay() == dateRanges[j].getStartDay() || dateRanges[i].getStartDay() == dateRanges[j].getEndDay() || dateRanges[i].getEndDay() == dateRanges[j].getStartDay() || dateRanges[i].getEndDay() == dateRanges[j].getEndDay()) {
+                    return false;
+                }
+                if ((dateRanges[i].getEndDay() > dateRanges[j].getEndDay() && dateRanges[i].getEndDay() < dateRanges[j].getStartDay()) || (dateRanges[i].getStartDay() > dateRanges[j].getEndDay() && dateRanges[i].getStartDay() < dateRanges[j].getStartDay())) {
+                    return false;
+                }
             }
         }
         return true;
@@ -98,5 +96,9 @@ public class ItemData {
             return false;
         }
         return ((ItemData) o).getItem().toString().equals(item.toString()) && ((ItemData) o).getSellByInfo().equals(sellByInfo);
+    }
+
+    public int compareTo(ItemData itemData) {
+        return Integer.compare(itemId, itemData.itemId);
     }
 }
