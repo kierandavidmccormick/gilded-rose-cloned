@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 
 public class GildedRoseTest {
@@ -42,7 +42,13 @@ public class GildedRoseTest {
                 )
         );
         ItemData potato = new ItemData("Eldrath, Lord of Potatoes", 10, 14, 50, 0, 1, 4, 0, -2);
-        GildedRose gildedRose = new GildedRose(Arrays.asList(sulfuras, agedBrie, conjuredAgedBrie, backstagePasses, conjuredBackstagePasses, cheese, conjuredCheese, potato));
+
+        //GildedRose gildedRose = new GildedRose(Arrays.asList(sulfuras, agedBrie, conjuredAgedBrie, backstagePasses, conjuredBackstagePasses, cheese, conjuredCheese, potato));
+
+        GildedRose gildedRose = spy(GildedRose.class);
+        doNothing().when(gildedRose).printItems();
+
+        gildedRose.addItems(Arrays.asList(sulfuras, agedBrie, conjuredAgedBrie, backstagePasses, conjuredBackstagePasses, cheese, conjuredCheese, potato));
 
         gildedRose.updateQuality();
         assertEquals(sulfuras.getItem().sellIn > 10000, true);

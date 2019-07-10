@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb8c289-61a0-4ab2-bca7-4609a177e3d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gildedrose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gildedrose.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gildedrose/PrintHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gildedrose/PrintHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/gildedrose/PrintHandlerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/gildedrose/PrintHandlerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrintHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrintHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GildedRoseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/PrintHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PrintHandlerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,43 +26,14 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="469">
-                  <caret line="107" column="16" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test/PrintHandlerTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="124">
-                  <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+                <state relative-caret-position="494">
+                  <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#2988#2998#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/GildedRoseTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="33" selection-start-line="5" selection-end-line="6" />
                 </state>
               </provider>
             </entry>
@@ -66,7 +42,7 @@
             <entry file="file://$PROJECT_DIR$/src/ItemData.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1470">
-                  <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+                  <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
                   <folding>
                     <element signature="e#2216#2217#0" expanded="true" />
                     <element signature="e#2243#2244#0" expanded="true" />
@@ -91,11 +67,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/PrintHandler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="526">
-                  <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+                <state relative-caret-position="621">
+                  <caret line="95" column="40" lean-forward="true" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#262#263#0" expanded="true" />
@@ -108,13 +84,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ItemLibrary.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="192">
-                  <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+                <state relative-caret-position="344">
+                  <caret line="36" column="65" lean-forward="true" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/RegexLibrary.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
@@ -153,13 +129,13 @@
         <option value="$PROJECT_DIR$/src/DateRange.java" />
         <option value="$PROJECT_DIR$/src/SellByInfo.java" />
         <option value="$PROJECT_DIR$/src/ItemLibrary.java" />
-        <option value="$PROJECT_DIR$/test/GildedRoseTest.java" />
         <option value="$PROJECT_DIR$/test/ItemDataTest.java" />
         <option value="$PROJECT_DIR$/src/ItemData.java" />
-        <option value="$PROJECT_DIR$/test/PrintHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GildedRose.java" />
+        <option value="$PROJECT_DIR$/test/GildedRoseTest.java" />
         <option value="$PROJECT_DIR$/src/PrintHandler.java" />
+        <option value="$PROJECT_DIR$/test/PrintHandlerTest.java" />
       </list>
     </option>
   </component>
@@ -217,7 +193,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
@@ -255,26 +231,30 @@
     <configuration name="All in gildedrose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gildedrose" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea --illegal-access=permit" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GildedRoseTest.globalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrintHandlerTest.formatItemDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gildedrose" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GildedRoseTest" />
-      <option name="METHOD_NAME" value="globalTest" />
+      <option name="MAIN_CLASS_NAME" value="PrintHandlerTest" />
+      <option name="METHOD_NAME" value="formatItemDataTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintHandlerTest.genCharsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrintHandlerTest.getBodyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gildedrose" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PrintHandlerTest" />
-      <option name="METHOD_NAME" value="genCharsTest" />
+      <option name="METHOD_NAME" value="getBodyTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -303,18 +283,18 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All in gildedrose" />
-      <item itemvalue="JUnit.GildedRoseTest.globalTest" />
-      <item itemvalue="JUnit.PrintHandlerTest.genCharsTest" />
       <item itemvalue="JUnit.PrintHandlerTest.getHeaderTest" />
       <item itemvalue="JUnit.PrintHandlerTest.setStringWidthTest" />
+      <item itemvalue="JUnit.PrintHandlerTest.formatItemDataTest" />
+      <item itemvalue="JUnit.PrintHandlerTest.getBodyTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PrintHandlerTest.setStringWidthTest" />
+        <item itemvalue="JUnit.PrintHandlerTest.getBodyTest" />
         <item itemvalue="JUnit.PrintHandlerTest.getHeaderTest" />
-        <item itemvalue="JUnit.PrintHandlerTest.genCharsTest" />
         <item itemvalue="JUnit.All in gildedrose" />
-        <item itemvalue="JUnit.GildedRoseTest.globalTest" />
+        <item itemvalue="JUnit.PrintHandlerTest.formatItemDataTest" />
+        <item itemvalue="JUnit.PrintHandlerTest.setStringWidthTest" />
       </list>
     </recent_temporary>
   </component>
@@ -332,35 +312,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PrintHandlerTest_genCharsTest - 2019.07.10 at 09h 25m 48s.xml">
-      <configuration name="PrintHandlerTest.genCharsTest" configurationId="JUnit" />
+    <history-entry file="All_in_gildedrose - 2019.07.10 at 13h 06m 21s.xml">
+      <configuration name="All in gildedrose" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrintHandlerTest_getHeaderTest - 2019.07.10 at 09h 29m 08s.xml">
+    <history-entry file="All_in_gildedrose - 2019.07.10 at 13h 16m 34s.xml">
+      <configuration name="All in gildedrose" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_gildedrose - 2019.07.10 at 13h 19m 09s.xml">
+      <configuration name="All in gildedrose" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrintHandlerTest_formatItemDataTest - 2019.07.10 at 13h 30m 12s.xml">
+      <configuration name="PrintHandlerTest.formatItemDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrintHandlerTest_formatItemDataTest - 2019.07.10 at 13h 30m 57s.xml">
+      <configuration name="PrintHandlerTest.formatItemDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrintHandlerTest_formatItemDataTest - 2019.07.10 at 13h 31m 17s.xml">
+      <configuration name="PrintHandlerTest.formatItemDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_gildedrose - 2019.07.10 at 13h 31m 23s.xml">
+      <configuration name="All in gildedrose" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_gildedrose - 2019.07.10 at 13h 31m 46s.xml">
+      <configuration name="All in gildedrose" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrintHandlerTest_getHeaderTest - 2019.07.10 at 13h 33m 03s.xml">
       <configuration name="PrintHandlerTest.getHeaderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrintHandlerTest_getHeaderTest - 2019.07.10 at 09h 30m 06s.xml">
+    <history-entry file="PrintHandlerTest_getHeaderTest - 2019.07.10 at 13h 33m 22s.xml">
       <configuration name="PrintHandlerTest.getHeaderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrintHandlerTest_getHeaderTest - 2019.07.10 at 09h 32m 59s.xml">
-      <configuration name="PrintHandlerTest.getHeaderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrintHandlerTest_getHeaderTest - 2019.07.10 at 09h 33m 18s.xml">
-      <configuration name="PrintHandlerTest.getHeaderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrintHandlerTest_getHeaderTest - 2019.07.10 at 09h 33m 38s.xml">
-      <configuration name="PrintHandlerTest.getHeaderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrintHandlerTest_setStringWidthTest - 2019.07.10 at 10h 13m 43s.xml">
-      <configuration name="PrintHandlerTest.setStringWidthTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrintHandlerTest_setStringWidthTest - 2019.07.10 at 10h 14m 29s.xml">
-      <configuration name="PrintHandlerTest.setStringWidthTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrintHandlerTest_setStringWidthTest - 2019.07.10 at 10h 15m 49s.xml">
-      <configuration name="PrintHandlerTest.setStringWidthTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrintHandlerTest_setStringWidthTest - 2019.07.10 at 10h 16m 23s.xml">
-      <configuration name="PrintHandlerTest.setStringWidthTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -377,7 +357,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32893288" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.28382838" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.25632563" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4059406" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -435,22 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SellByInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="50" column="74" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/SellByInfoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -482,17 +446,10 @@
     <entry file="file://$PROJECT_DIR$/test/ItemDataTest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/GildedRoseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="33" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ItemData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
-          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
           <folding>
             <element signature="e#2216#2217#0" expanded="true" />
             <element signature="e#2243#2244#0" expanded="true" />
@@ -512,10 +469,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/PrintHandlerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/SellByInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        <state relative-caret-position="748">
+          <caret line="50" column="74" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/mockito-all-1.10.19.jar!/org/mockito/Mockito.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="1401" column="28" selection-start-line="1401" selection-start-column="28" selection-end-line="1401" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/GildedRoseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -524,15 +527,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ItemLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="344">
+          <caret line="36" column="65" lean-forward="true" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/PrintHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="621">
+          <caret line="95" column="40" lean-forward="true" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -543,24 +551,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
+    <entry file="file://$PROJECT_DIR$/test/PrintHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="107" column="16" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
+        <state relative-caret-position="494">
+          <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrintHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#2988#2998#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -582,6 +579,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -604,6 +602,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

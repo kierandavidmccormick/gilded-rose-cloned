@@ -97,7 +97,7 @@ class GildedRose {
         printItems();
     }
 
-    private void printItems() {
+    public void printItems() {
         Collections.sort(items);
         System.out.print(printHandler.getPrintString(items));
     }

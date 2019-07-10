@@ -55,7 +55,9 @@ public class PrintHandler {
         header.append(genChars('-', screenWidth));
         header.append('\n');
 
-        header.append(setStringWidth("Item ID:", ID_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
+        if (showItemIds) {
+            header.append(setStringWidth("Item ID:", ID_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
+        }
         header.append(setStringWidth("NAME:", NAME_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
         header.append(setStringWidth("Quality:", QUALITY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
         header.append(setStringWidth("Sell In:", SELLBY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
@@ -72,6 +74,7 @@ public class PrintHandler {
         if (items.size() == 0) {
             body.append("No items in inventory\n");
         }
+        body.append("\n");
         return body;
     }
 
