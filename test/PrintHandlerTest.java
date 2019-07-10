@@ -8,6 +8,7 @@ public class PrintHandlerTest {
 
     @Test
     public void getHeaderTest() {
+        //TODO: update this test
         PrintHandler print = new PrintHandler(false, 20);
         assertEquals("*    Gilded Rose   *\n--------------------\n", print.getHeader().toString());
         print.setScreenWidth(3);

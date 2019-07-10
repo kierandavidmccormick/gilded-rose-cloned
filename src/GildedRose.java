@@ -33,7 +33,8 @@ class GildedRose {
     }
 
     public GildedRose() {
-        items = new ArrayList<ItemData>();
+        items = new ArrayList<>();
+        printHandler = new PrintHandler(true, 120);
     }
 
     public void updateQuality() {
@@ -102,8 +103,8 @@ class GildedRose {
     }
 
     public void initItems() {
-        items.add(ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 50));
-        items.add(ItemLibrary.getNamedItemData("Conjured Aged Brie", 3, 10));
-        items.add(ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 5, 10));
+        addItem(ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 50));
+        addItem(ItemLibrary.getNamedItemData("Conjured Aged Brie", 3, 10));
+        addItem(ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 5, 10));
     }
 }

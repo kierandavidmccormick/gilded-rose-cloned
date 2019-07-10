@@ -26,6 +26,12 @@ public class PrintHandler {
     public boolean showItemIds;
     public int screenWidth;
 
+    final int ID_COLUMN_WIDTH = 10;
+    final int NAME_COLUMN_WIDTH = 40;
+    final int QUALITY_COLUMN_WIDTH = 8;
+    final int SELLBY_COLUMN_WIDTH = 8;
+    final int COLUMN_SPACING = 4;
+
     public String getPrintString(Collection<ItemData> items) {
         StringBuilder printString = new StringBuilder();
         printString.append(getHeader());
@@ -49,7 +55,11 @@ public class PrintHandler {
         header.append(genChars('-', screenWidth));
         header.append('\n');
 
-        //TODO: column headers
+        header.append(setStringWidth("Item ID:", ID_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
+        header.append(setStringWidth("NAME:", NAME_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
+        header.append(setStringWidth("Quality:", QUALITY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
+        header.append(setStringWidth("Sell In:", SELLBY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
+        header.append("\n\n");
 
         return header;
     }
@@ -57,7 +67,7 @@ public class PrintHandler {
     public StringBuilder getBody(Collection<ItemData> items) {
         StringBuilder body = new StringBuilder();
         for (ItemData item : items) {
-            body.append(formatItemData(item, 4));
+            body.append(formatItemData(item));
         }
         if (items.size() == 0) {
             body.append("No items in inventory\n");
@@ -65,17 +75,17 @@ public class PrintHandler {
         return body;
     }
 
-    public StringBuilder formatItemData(ItemData item, int columnSpace) {
+    public StringBuilder formatItemData(ItemData item) {
         StringBuilder itemString = new StringBuilder();
         if (showItemIds) {
-            itemString.append(StringUtils.abbreviate(Integer.toString(item.getItemId()), 10)).append(genChars(' ', columnSpace));
+            itemString.append(setStringWidth(Integer.toString(item.getItemId()), ID_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
         }
-        itemString.append(StringUtils.abbreviate(item.getItem().name, 20)).append(genChars(' ', columnSpace))
-                    .append(StringUtils.abbreviate(Integer.toString(item.getItem().quality), 5)).append(genChars(' ', columnSpace))
-                    .append(StringUtils.abbreviate(Integer.toString(item.getItem().sellIn), 5)).append(genChars(' ', columnSpace))
+        itemString.append(setStringWidth(item.getItem().name, NAME_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
+                    .append(setStringWidth(Integer.toString(item.getItem().quality), QUALITY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
+                    .append(setStringWidth(Integer.toString(item.getItem().sellIn), SELLBY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
                     .append("\n");
 
-        return null;
+        return itemString;
     }
 
     public StringBuilder genChars(char c, int count) {
