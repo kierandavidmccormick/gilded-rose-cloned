@@ -12,6 +12,7 @@ class GildedRose {
      */
     private ArrayList<ItemData> items;
     private int itemId = 0;
+    private PrintHandler printHandler;
 
     public void addItem(ItemData item) {
         items.add(item);
@@ -27,6 +28,8 @@ class GildedRose {
 
     public  GildedRose(Collection<ItemData> items) {
         this.items = new ArrayList<>(items);
+        printHandler = new PrintHandler(true, 120);
+
     }
 
     public GildedRose() {
@@ -90,9 +93,17 @@ class GildedRose {
         for (ItemData item : items) {
             item.updateItem();
         }
+        printItems();
     }
 
     private void printItems() {
         Collections.sort(items);
+        System.out.print(printHandler.getPrintString(items));
+    }
+
+    public void initItems() {
+        items.add(ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 50));
+        items.add(ItemLibrary.getNamedItemData("Conjured Aged Brie", 3, 10));
+        items.add(ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 5, 10));
     }
 }
