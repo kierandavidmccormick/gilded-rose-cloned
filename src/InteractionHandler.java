@@ -1,4 +1,110 @@
-package PACKAGE_NAME;
+import java.util.Scanner;
 
 public class InteractionHandler {
+
+    public InteractionHandler(Scanner scanner, GildedRose gildedRose) {
+        this.scanner = scanner;
+        this.gildedRose = gildedRose;
+    }
+
+    Scanner scanner;
+    GildedRose gildedRose;
+
+    public void determineInteraction() {
+        char c = '@';
+        do {
+            if (!scanner.hasNext()) {
+                System.out.println("Please input a valid command");
+            }
+            c = Character.toUpperCase(scanner.next().charAt(0));
+            switch (c) {
+                case 'D':
+                    advanceDay();
+                    break;
+                case 'A':
+                    addItem();
+                    break;
+                case 'R':
+                    removeItem();
+                    break;
+                case 'E':
+                    c = '@';
+                    break;
+                default:
+                    c = '#';
+                    break;
+            }
+        } while (c != '@');
+    }
+
+    public void advanceDay() {
+        gildedRose.updateQuality();
+        gildedRose.printItems();
+    }
+
+    public void removeItem() {
+        ItemData item = getItemBYId();
+        gildedRose.removeItem(item);
+        gildedRose.printItems();
+    }
+
+    public void addItem() {
+        gildedRose.addItem(createItem());
+        gildedRose.printItems();
+    }
+
+    public ItemData getItemBYId() {
+        int itemId = -1;
+        ItemData itemData = null;
+        System.out.print("Input Item ID: ");
+        do {
+            if (!scanner.hasNextInt()) {
+                System.out.println("Please input a valid item ID");
+            }
+            itemId = scanner.nextInt();
+            //TODO: fix capitalization for "ID"
+            itemData = gildedRose.getItemByID(itemId);
+            if (itemData == null) {
+                System.out.println("Please input a valid item ID");
+            }
+        } while (itemId == -1 || itemData == null);
+        return itemData;
+    }
+
+    public ItemData createItem() {
+        System.out.print("Please input an item name: ");
+        String itemName = scanner.next();
+        System.out.print("Please input the number of sell by days: ");
+        //TODO: validation
+        int sellByDays = scanner.nextInt();
+        System.out.print("Please input the quality of the item: ");
+        int quality = scanner.nextInt();
+
+        int dateRangesSize = 0;
+        do {
+            //TODO: make some of these messages clearer
+            System.out.print("Please input the number of date ranges: ");
+            dateRangesSize = scanner.nextInt();
+        } while (dateRangesSize < 0);
+
+        //TODO: validate date ranges
+        DateRange[] dateRanges = new DateRange[dateRangesSize];
+        for (int i = 0; i < dateRangesSize; i++) {
+            System.out.println("Date range " + i);
+            System.out.print("Enter start day: ");
+            int startDay = scanner.nextInt();
+            System.out.print("Enter end day: ");
+            int endDay = scanner.nextInt();
+            System.out.print("Enter quality change: ");
+            int qualityChange = scanner.nextInt();
+            dateRanges[i] = new DateRange(startDay, endDay, qualityChange);
+        }
+
+        System.out.print("Enter maximum quality: ");
+        int maxQuality = scanner.nextInt();
+        System.out.print("Enter minimum quality: ");
+        int minQuality = scanner.nextInt();
+
+        return new ItemData(new Item(itemName, sellByDays, quality), new SellByInfo(dateRanges, maxQuality, minQuality));
+    }
 }

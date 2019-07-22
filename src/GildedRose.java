@@ -26,6 +26,18 @@ class GildedRose {
         }
     }
 
+    public void removeItem(ItemData item) {
+        items.remove(item);
+    }
+
+    public void removeItems(Collection<ItemData> items) {
+        this.items.removeAll(items);
+    }
+
+    public ArrayList<ItemData> getItems() {
+        return items;
+    }
+
     public  GildedRose(Collection<ItemData> items) {
         this.items = new ArrayList<>(items);
         printHandler = new PrintHandler(true, 120);
@@ -94,7 +106,7 @@ class GildedRose {
         for (ItemData item : items) {
             item.updateItem();
         }
-        printItems();
+        //printItems();
     }
 
     public void printItems() {
@@ -106,5 +118,10 @@ class GildedRose {
         addItem(ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 50));
         addItem(ItemLibrary.getNamedItemData("Conjured Aged Brie", 3, 10));
         addItem(ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 5, 10));
+    }
+
+    //TODO: test
+    public ItemData getItemByID(int id) {
+        return items.stream().filter(o -> o.getItemId() == id).findFirst().orElse(null);
     }
 }

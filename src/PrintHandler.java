@@ -33,10 +33,7 @@ public class PrintHandler {
     final int COLUMN_SPACING = 4;
 
     public String getPrintString(Collection<ItemData> items) {
-        StringBuilder printString = new StringBuilder();
-        printString.append(getHeader());
-        printString.append(getBody(items));
-        return printString.toString();
+        return getHeader().toString() + getBody(items).toString() + getInteractions().toString();
     }
 
     public StringBuilder getHeader() {
@@ -76,6 +73,15 @@ public class PrintHandler {
         }
         body.append("\n");
         return body;
+    }
+
+    public StringBuilder getInteractions() {
+        StringBuilder interactions = new StringBuilder();
+        interactions.append("Press [D] to advance day\n");
+        interactions.append("Press [A] to add item\n");
+        interactions.append("Press [R] to remove item\n");
+        interactions.append("Press [E] to exit\n");
+        return interactions;
     }
 
     public StringBuilder formatItemData(ItemData item) {

@@ -10,8 +10,6 @@ public class SellByInfo {
     }
 
     public SellByInfo(DateRange dateRange, int maxQuality, int minQuality) {
-        //DateRange[] dateRanges = {dateRange};
-        //there has to be a better way to do this
         this(Collections.singletonList(dateRange).toArray(DateRange[]::new), maxQuality, minQuality);
     }
 

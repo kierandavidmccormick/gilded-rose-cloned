@@ -17,6 +17,7 @@ public class ItemData implements Comparable<ItemData>{
         sellByInfo = new SellByInfo(dateRangeArray, maxQuality, minQuality);
     }
 
+    //TODO: refactor this into a lower-level class; sellByInfo would work
     public static boolean validateDateRanges(DateRange[] dateRanges) {
         if (dateRanges == null || dateRanges.length == 0) {
             return false;
