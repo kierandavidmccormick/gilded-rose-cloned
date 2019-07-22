@@ -49,6 +49,7 @@ class GildedRose {
         printHandler = new PrintHandler(true, 120);
     }
 
+    //TODO: quality changes are off-by-one
     public void updateQuality() {
         /*
         for (int i = 0; i < items.length; i++) {

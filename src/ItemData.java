@@ -17,32 +17,6 @@ public class ItemData implements Comparable<ItemData>{
         sellByInfo = new SellByInfo(dateRangeArray, maxQuality, minQuality);
     }
 
-    //TODO: refactor this into a lower-level class; sellByInfo would work
-    public static boolean validateDateRanges(DateRange[] dateRanges) {
-        if (dateRanges == null || dateRanges.length == 0) {
-            return false;
-        }
-        if (dateRanges[dateRanges.length - 1].getEndDay() > dateRanges[dateRanges.length - 1].getStartDay()) {
-            return false;
-        }
-        for (int i = 0; i < dateRanges.length - 1; i++) {
-            if (dateRanges[i].getEndDay() > dateRanges[i].getStartDay()) {
-                return false;
-            }
-            for (int j = i + 1; j < dateRanges.length; j++) {
-                //TODO: can these be simplified
-                //TODO: this might need more test coverage
-                if (dateRanges[i].getStartDay() == dateRanges[j].getStartDay() || dateRanges[i].getStartDay() == dateRanges[j].getEndDay() || dateRanges[i].getEndDay() == dateRanges[j].getStartDay() || dateRanges[i].getEndDay() == dateRanges[j].getEndDay()) {
-                    return false;
-                }
-                if ((dateRanges[i].getEndDay() > dateRanges[j].getEndDay() && dateRanges[i].getEndDay() < dateRanges[j].getStartDay()) || (dateRanges[i].getStartDay() > dateRanges[j].getEndDay() && dateRanges[i].getStartDay() < dateRanges[j].getStartDay())) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
     public Item getItem() {
         return item;
     }

@@ -72,8 +72,10 @@ public class InteractionHandler {
     }
 
     public ItemData createItem() {
+        scanner.nextLine();
+
         System.out.print("Please input an item name: ");
-        String itemName = scanner.next();
+        String itemName = scanner.nextLine();
         System.out.print("Please input the number of sell by days: ");
         //TODO: validation
         int sellByDays = scanner.nextInt();
@@ -87,18 +89,23 @@ public class InteractionHandler {
             dateRangesSize = scanner.nextInt();
         } while (dateRangesSize < 0);
 
-        //TODO: validate date ranges
         DateRange[] dateRanges = new DateRange[dateRangesSize];
-        for (int i = 0; i < dateRangesSize; i++) {
-            System.out.println("Date range " + i);
-            System.out.print("Enter start day: ");
-            int startDay = scanner.nextInt();
-            System.out.print("Enter end day: ");
-            int endDay = scanner.nextInt();
-            System.out.print("Enter quality change: ");
-            int qualityChange = scanner.nextInt();
-            dateRanges[i] = new DateRange(startDay, endDay, qualityChange);
-        }
+        do {
+            for (int i = 0; i < dateRangesSize; i++) {
+                System.out.println("Date range " + i);
+                System.out.print("Enter start day: ");
+                int startDay = scanner.nextInt();
+                System.out.print("Enter end day: ");
+                int endDay = scanner.nextInt();
+                System.out.print("Enter quality change: ");
+                int qualityChange = scanner.nextInt();
+                dateRanges[i] = new DateRange(startDay, endDay, qualityChange);
+            }
+            //TODO: this is inefficient (not that bad, usually n is small), but fixing it could be confusing
+            if (!SellByInfo.validateDateRanges(dateRanges)) {
+                System.err.println("ERROR: date ranges invalid; try again");
+            }
+        } while (!SellByInfo.validateDateRanges(dateRanges));
 
         System.out.print("Enter maximum quality: ");
         int maxQuality = scanner.nextInt();

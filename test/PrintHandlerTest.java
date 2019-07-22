@@ -71,7 +71,8 @@ public class PrintHandlerTest {
         PrintHandler printHandler = new PrintHandler(true, 120);
         assertEquals("Press [D] to advance day\n" +
                                 "Press [A] to add item\n" +
-                                "Press [R] to remove item\n",
+                                "Press [R] to remove item\n" +
+                                "Press [E] to exit\n",
                                 printHandler.getInteractions().toString());
     }
 }
