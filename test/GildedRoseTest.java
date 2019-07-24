@@ -10,12 +10,6 @@ public class GildedRoseTest {
 
     @Test
     public void globalTest() throws Exception {
-        /*
-        Item[] items = new Item[] { new Item("foo", 0, 0) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals("fixme", app.items[0].name);
-        */
         ItemData sulfuras = ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 80);
         ItemData agedBrie = ItemLibrary.getNamedItemData("Aged Brie", 5, 10);
         ItemData conjuredAgedBrie = ItemLibrary.getNamedItemData("Conjured Aged Brie", 5, 10);

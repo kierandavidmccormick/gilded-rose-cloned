@@ -29,7 +29,6 @@ public class InteractionHandlerTest {
         interactionHandler.determineInteraction();
 
         ItemData sulfuras = ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 80);
-        sulfuras.getItem().sellIn = Integer.MAX_VALUE - 3;
         ItemData conjuredAgedBrie = ItemLibrary.getNamedItemData("Conjured Aged Brie", 0, 13);
         ItemData backstagePasses = ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 2, 22);
 

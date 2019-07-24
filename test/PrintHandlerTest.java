@@ -48,9 +48,9 @@ public class PrintHandlerTest {
     public void formatItemDataTest() {
         PrintHandler printHandler = new PrintHandler(true, 120);
         ItemData item = ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 80);
-        assertEquals("0             Sulfuras, Hand of Ragnaros                  80          21474...    \n", printHandler.formatItemData(item).toString());
+        assertEquals("0             Sulfuras, Hand of Ragnaros                  80          INFINITE    \n", printHandler.formatItemData(item).toString());
         printHandler.setShowItemIds(false);
-        assertEquals("Sulfuras, Hand of Ragnaros                  80          21474...    \n", printHandler.formatItemData(item).toString());
+        assertEquals("Sulfuras, Hand of Ragnaros                  80          INFINITE    \n", printHandler.formatItemData(item).toString());
     }
 
     @Test
@@ -59,7 +59,7 @@ public class PrintHandlerTest {
         ArrayList<ItemData> items = new ArrayList<ItemData>(Arrays.asList(ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 80),
                                                                             ItemLibrary.getNamedItemData("Aged Brie", 20, 2),
                                                                             ItemLibrary.getNamedItemData("Conjured Backstage Passes", 4, 10)));
-        assertEquals("0             Sulfuras, Hand of Ragnaros                  80          21474...    \n" +
+        assertEquals("0             Sulfuras, Hand of Ragnaros                  80          INFINITE    \n" +
                                 "0             Aged Brie                                   2           20          \n" +
                                 "0             Conjured Backstage Passes                   10          4           \n" +
                                 "\n",

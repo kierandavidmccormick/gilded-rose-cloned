@@ -46,17 +46,26 @@ public class ItemData implements Comparable<ItemData>{
     private int itemId;
 
     public void updateItem() {
-        long uncappedQuality = item.quality + sellByInfo.getQualityChange(item.sellIn);
-        if (uncappedQuality < sellByInfo.getMinQuality()) {
-            uncappedQuality = sellByInfo.getMinQuality();
-        } else if (uncappedQuality > sellByInfo.getMaxQuality()) {
-            uncappedQuality = sellByInfo.getMaxQuality();
-        }
-        item.quality = (int) uncappedQuality;
+        long qualityChange = sellByInfo.getQualityChange(item.sellIn);
+        long quality = item.quality;
+        long longResetValue = qualityChange > 0 ? Long.MAX_VALUE : Long.MIN_VALUE;
+
         try {
-            item.sellIn--;
+            quality = Math.addExact(quality, qualityChange);
         } catch (ArithmeticException e) {
-            item.sellIn = Integer.MIN_VALUE;
+            quality = longResetValue;
+        }
+
+        if (quality > sellByInfo.getMaxQuality()) {
+            item.quality = sellByInfo.getMaxQuality();
+        } else if (quality < sellByInfo.getMinQuality()) {
+            item.quality = sellByInfo.getMinQuality();
+        } else {
+            item.quality = (int)quality;
+        }
+
+        if (item.sellIn != Integer.MIN_VALUE && item.sellIn != Integer.MAX_VALUE) {
+            item.sellIn--;
         }
     }
 

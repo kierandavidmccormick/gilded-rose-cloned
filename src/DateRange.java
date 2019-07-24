@@ -32,6 +32,7 @@ public class DateRange {
     private int startDay;
     private int endDay;
     //this is long to ensure that the entirety of the quality range can be reached by a single day's update
+    //TODO: this shouldn't be; fix
     private long qualityChange;
 
     @Override

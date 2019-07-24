@@ -91,7 +91,9 @@ public class PrintHandler {
         }
         itemString.append(setStringWidth(item.getItem().name, NAME_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
                     .append(setStringWidth(Integer.toString(item.getItem().quality), QUALITY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
-                    .append(setStringWidth(Integer.toString(item.getItem().sellIn), SELLBY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
+                    .append(setStringWidth(
+                            item.getItem().sellIn != Integer.MAX_VALUE ? Integer.toString(item.getItem().sellIn) : "INFINITE"
+                            , SELLBY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
                     .append("\n");
 
         return itemString;

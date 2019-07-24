@@ -62,7 +62,7 @@ class GildedRose {
         while (interactionHandler.determineInteraction()){}
     }
 
-    //TODO: quality changes are off-by-one
+    //TODO: quality changes are off-by-one (sometimes) - can probably be dealt with by changing the items
     public void updateQuality() {
         /*
         for (int i = 0; i < items.length; i++) {
@@ -134,7 +134,6 @@ class GildedRose {
         addItem(ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 5, 10));
     }
 
-    //TODO: test
     public ItemData getItemByID(int id) {
         return items.stream().filter(o -> o.getItemId() == id).findFirst().orElse(null);
     }
