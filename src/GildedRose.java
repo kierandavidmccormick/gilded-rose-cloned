@@ -13,6 +13,15 @@ class GildedRose {
     private ArrayList<ItemData> items;
     private int itemId = 0;
     private PrintHandler printHandler;
+    private InteractionHandler interactionHandler;
+
+    public InteractionHandler getInteractionHandler() {
+        return interactionHandler;
+    }
+
+    public void setInteractionHandler(InteractionHandler interactionHandler) {
+        this.interactionHandler = interactionHandler;
+    }
 
     public void addItem(ItemData item) {
         items.add(item);
@@ -41,12 +50,16 @@ class GildedRose {
     public  GildedRose(Collection<ItemData> items) {
         this.items = new ArrayList<>(items);
         printHandler = new PrintHandler(true, 120);
-
+        //TODO: the way that InteractionHandlers are dealt with is complex and confusing
     }
 
     public GildedRose() {
         items = new ArrayList<>();
         printHandler = new PrintHandler(true, 120);
+    }
+
+    public void interact() {
+        while (interactionHandler.determineInteraction()){}
     }
 
     //TODO: quality changes are off-by-one

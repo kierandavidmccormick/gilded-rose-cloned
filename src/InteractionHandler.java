@@ -5,14 +5,15 @@ public class InteractionHandler {
     public InteractionHandler(Scanner scanner, GildedRose gildedRose) {
         this.scanner = scanner;
         this.gildedRose = gildedRose;
+        this.gildedRose.setInteractionHandler(this);
     }
 
     Scanner scanner;
     GildedRose gildedRose;
 
-    public void determineInteraction() {
-        char c = '@';
-        do {
+    public boolean determineInteraction() {
+        char c;
+        while (true) {
             if (!scanner.hasNext()) {
                 System.out.println("Please input a valid command");
             }
@@ -20,21 +21,19 @@ public class InteractionHandler {
             switch (c) {
                 case 'D':
                     advanceDay();
-                    break;
+                    return false;
                 case 'A':
                     addItem();
-                    break;
+                    return false;
                 case 'R':
                     removeItem();
-                    break;
+                    return false;
                 case 'E':
-                    c = '@';
-                    break;
+                    return true;
                 default:
-                    c = '#';
                     break;
             }
-        } while (c != '@');
+        }
     }
 
     public void advanceDay() {
@@ -101,7 +100,7 @@ public class InteractionHandler {
                 int qualityChange = scanner.nextInt();
                 dateRanges[i] = new DateRange(startDay, endDay, qualityChange);
             }
-            //TODO: this is inefficient (not that bad, usually n is small), but fixing it could be confusing
+            //TODO: this is inefficient (not that bad, usually n is small), fixing it could be confusing
             if (!SellByInfo.validateDateRanges(dateRanges)) {
                 System.err.println("ERROR: date ranges invalid; try again");
             }
