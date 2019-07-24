@@ -1,9 +1,12 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.spy;
 
 public class InteractionHandlerTest {
@@ -14,9 +17,9 @@ public class InteractionHandlerTest {
     @BeforeEach
     public void beforeEach() {
         gildedRose = spy(GildedRose.class);
-        //doNothing().when(gildedRose).printItems();
+        doNothing().when(gildedRose).printItems();
         gildedRose.initItems();
-
+        System.setOut(new PrintStream(new ByteArrayOutputStream()));
     }
 
     @Test
@@ -72,15 +75,28 @@ public class InteractionHandlerTest {
     @Test
     public void addItemTest() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "a\nThe Item\n14\n45\n2\n99999\n1\n-2\n0\n-99999\n-99999\n50\n0\n"
+                "a\nThe Item\n14\n45\n2\nINT_MAX\n1\n-2\n0\nINT_MIN\nINTEGER.MINVALUE\n50\n0\n"
         ), gildedRose);
         gildedRose.interact();
         ItemData shouldMatch = null;
         try {
-            shouldMatch = new ItemData("The Item", 14, 45, 50, 0, 2, 99999, 1, -2, 0, -99999, -99999);
+            shouldMatch = new ItemData("The Item", 14, 45, 50, 0, 2, Integer.MAX_VALUE, 1, -2, 0, Integer.MIN_VALUE, Integer.MIN_VALUE);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
         assertEquals(shouldMatch, gildedRose.getItems().get(3));
+    }
+
+    @Test
+    public void getIntTest() {
+        interactionHandler = new InteractionHandler(new Scanner(
+                "4\n-7\n99999\nINT_MAX\nInteger.MIN_VALUE\naaaaa\n14"
+        ), gildedRose);
+        assertEquals(4, interactionHandler.getInt());
+        assertEquals(-7, interactionHandler.getInt());
+        assertEquals(99999, interactionHandler.getInt());
+        assertEquals(Integer.MAX_VALUE, interactionHandler.getInt());
+        assertEquals(Integer.MIN_VALUE, interactionHandler.getInt());
+        assertEquals(14, interactionHandler.getInt());
     }
 }

@@ -3,5 +3,8 @@ public abstract class RegexLibrary {
     public static final String AGEDBRIE = "(?i)(Conjured )?Aged Brie";
     public static final String BACKSTAGEPASSES = "(?i)(Conjured )?Backstage Passes.*";
     public static final String CONJURED = "(?i)Conjured.*";
+
+    public static final String INTMAXSTRING = "(?i)(Int|Integer)(_|.|-| )?(Max|Maximum)(_|.|-| )?(Value)?";
+    public static final String INTMINSTRING = "(?i)(Int|Integer)(_|.|-| )?(Min|Minimum)(_|.|-| )?(Value)?";
     public static final String ANYITEM = ".*";
 }
