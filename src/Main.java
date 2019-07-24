@@ -1,4 +1,3 @@
-import java.io.InputStream;
 import java.util.Scanner;
 
 public class Main {
@@ -7,10 +6,8 @@ public class Main {
         GildedRose gildedRose = new GildedRose();
         gildedRose.initItems();
         InteractionHandler interactionHandler = new InteractionHandler(new Scanner(System.in), gildedRose);
-        //while (true) {
-            gildedRose.printItems();
-            interactionHandler.determineInteraction();
-            //gildedRose.updateQuality();
-        //}
+        gildedRose.printItems();
+        while (!interactionHandler.determineInteraction()) {
+        }
     }
 }

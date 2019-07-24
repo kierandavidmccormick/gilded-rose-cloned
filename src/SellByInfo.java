@@ -74,11 +74,14 @@ public class SellByInfo {
         return Arrays.deepEquals(((SellByInfo)o).getDateRanges(), dateRanges) && ((SellByInfo)o).getMaxQuality() == maxQuality && ((SellByInfo)o).getMinQuality() == minQuality;
     }
 
-    public static boolean validateDateRanges(DateRange[] dateRanges) {
+    public boolean validate() {
         if (dateRanges == null || dateRanges.length == 0) {
             return false;
         }
         if (dateRanges[dateRanges.length - 1].getEndDay() > dateRanges[dateRanges.length - 1].getStartDay()) {
+            return false;
+        }
+        if (maxQuality < minQuality) {
             return false;
         }
         for (int i = 0; i < dateRanges.length - 1; i++) {

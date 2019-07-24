@@ -23,6 +23,7 @@ public class PrintHandler {
         this.screenWidth = screenWidth;
     }
 
+    //TODO: this never gets used - add a use or eliminate
     public boolean showItemIds;
     public int screenWidth;
 
@@ -87,16 +88,22 @@ public class PrintHandler {
     public StringBuilder formatItemData(ItemData item) {
         StringBuilder itemString = new StringBuilder();
         if (showItemIds) {
-            itemString.append(setStringWidth(Integer.toString(item.getItemId()), ID_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING));
+            itemString.append(formatValue(item.getItemId(), ID_COLUMN_WIDTH, COLUMN_SPACING));
         }
-        itemString.append(setStringWidth(item.getItem().name, NAME_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
-                    .append(setStringWidth(Integer.toString(item.getItem().quality), QUALITY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
-                    .append(setStringWidth(
-                            item.getItem().sellIn != Integer.MAX_VALUE ? Integer.toString(item.getItem().sellIn) : "INFINITE"
-                            , SELLBY_COLUMN_WIDTH)).append(genChars(' ', COLUMN_SPACING))
+        itemString.append(formatValue(item.getItem().name, NAME_COLUMN_WIDTH, COLUMN_SPACING))
+                    .append(formatValue(item.getItem().quality, QUALITY_COLUMN_WIDTH, COLUMN_SPACING))
+                    .append(formatValue(item.getItem().sellIn, SELLBY_COLUMN_WIDTH, COLUMN_SPACING))
                     .append("\n");
 
         return itemString;
+    }
+
+    public StringBuilder formatValue(int value, int columnWidth, int columnSpacing) {
+        return value == Integer.MAX_VALUE ? formatValue("INFINITE", columnWidth, columnSpacing) : formatValue(Integer.toString(value), columnWidth, columnSpacing);
+    }
+
+    public StringBuilder formatValue(String value, int columnWidth, int columnSpacing) {
+        return setStringWidth(value, columnWidth).append(genChars(' ', columnSpacing));
     }
 
     public StringBuilder genChars(char c, int count) {

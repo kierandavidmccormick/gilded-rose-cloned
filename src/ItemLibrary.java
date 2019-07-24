@@ -18,17 +18,14 @@ public abstract class ItemLibrary {
                     new SellByInfo(new DateRange(Integer.MAX_VALUE, Integer.MIN_VALUE, 1), 50, 0)
             );
         } else if (name.matches(RegexLibrary.BACKSTAGEPASSES)) {
-            //this is poorly formatted
             itemData = new ItemData(
                     new Item(name, sellByDays, baseQuality),
-                    new SellByInfo(new DateRange[] {
-                                        new DateRange(Integer.MIN_VALUE, 11, 1),
-                                        new DateRange(10, 5, 2),
-                                        new DateRange(4, 1, 5),
-                                        new DateRange(0, Integer.MIN_VALUE, Long.MIN_VALUE)
-                                    },
-                                    50, 0
-                    )
+                    new SellByInfo(new DateRange[]{
+                            new DateRange(Integer.MIN_VALUE, 11, 1),
+                            new DateRange(10, 5, 2),
+                            new DateRange(4, 1, 5),
+                            new DateRange(0, Integer.MIN_VALUE, Long.MIN_VALUE)
+                    }, 50, 0)
             );
         }
         if (itemData != null && name.matches(RegexLibrary.CONJURED)) {

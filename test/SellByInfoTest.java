@@ -24,11 +24,14 @@ class SellByInfoTest {
         DateRange dateRange2 = new DateRange(0,-2,-1);
         DateRange dateRange3 = new DateRange(-1, -5, Integer.MIN_VALUE);
         //TODO: add 4th test
-        DateRange[] dateRanges1 = {dateRange1, dateRange2};
-        DateRange[] dateRanges2 = {dateRange1, dateRange3};
-        DateRange[] dateRanges3 = {dateRange2, dateRange3};
-        assertEquals(false, SellByInfo.validateDateRanges(dateRanges1));
-        assertEquals(true, SellByInfo.validateDateRanges(dateRanges2));
-        assertEquals(false, SellByInfo.validateDateRanges(dateRanges3));
+        SellByInfo sellByInfo1 = new SellByInfo(new DateRange[]{dateRange1, dateRange2}, 20, 10);
+        SellByInfo sellByInfo2 = new SellByInfo(new DateRange[]{dateRange1, dateRange3}, 20, 10);
+        SellByInfo sellByInfo3 = new SellByInfo(new DateRange[]{dateRange2, dateRange3}, 20, 10);
+        SellByInfo sellByInfo4 = new SellByInfo(new DateRange[]{dateRange1, dateRange3}, 10, 20);
+
+        assertEquals(false, sellByInfo1.validate());
+        assertEquals(true, sellByInfo2.validate());
+        assertEquals(false, sellByInfo3.validate());
+        assertEquals(false, sellByInfo4.validate());
     }
 }

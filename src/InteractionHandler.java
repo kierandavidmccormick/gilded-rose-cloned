@@ -14,9 +14,6 @@ public class InteractionHandler {
     public boolean determineInteraction() {
         char c;
         while (true) {
-            if (!scanner.hasNext()) {
-                System.out.println("Please input a valid command");
-            }
             c = Character.toUpperCase(scanner.next().charAt(0));
             switch (c) {
                 case 'D':
@@ -31,6 +28,7 @@ public class InteractionHandler {
                 case 'E':
                     return true;
                 default:
+                    System.out.println("Please input a valid command");
                     break;
             }
         }
@@ -90,7 +88,8 @@ public class InteractionHandler {
         } while (dateRangesSize < 0);
 
         DateRange[] dateRanges = new DateRange[dateRangesSize];
-        do {
+        SellByInfo sellByInfo;
+        while (true) {
             for (int i = 0; i < dateRangesSize; i++) {
                 System.out.println("Date range " + i);
                 System.out.print("Enter start day: ");
@@ -101,18 +100,22 @@ public class InteractionHandler {
                 int qualityChange = getInt();
                 dateRanges[i] = new DateRange(startDay, endDay, qualityChange);
             }
-            //TODO: this is inefficient (not that bad, usually n is small), fixing it could be confusing
-            if (!SellByInfo.validateDateRanges(dateRanges)) {
-                System.err.println("ERROR: date ranges invalid; try again");
+
+            System.out.print("Enter maximum quality: ");
+            int maxQuality = getInt();
+            System.out.print("Enter minimum quality: ");
+            int minQuality = getInt();
+
+            sellByInfo = new SellByInfo(dateRanges, maxQuality, minQuality);
+
+            if (!sellByInfo.validate()) {
+                System.out.println("ERROR: Date Range or Quality Range invalid; try again");
+            } else {
+                break;
             }
-        } while (!SellByInfo.validateDateRanges(dateRanges));
+        }
 
-        System.out.print("Enter maximum quality: ");
-        int maxQuality = getInt();
-        System.out.print("Enter minimum quality: ");
-        int minQuality = getInt();
-
-        return new ItemData(new Item(itemName, sellByDays, quality), new SellByInfo(dateRanges, maxQuality, minQuality));
+        return new ItemData(new Item(itemName, sellByDays, quality), sellByInfo);
     }
 
     public int getInt() {
@@ -128,6 +131,7 @@ public class InteractionHandler {
             try {
                 i = Integer.parseInt(intString);
             } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid integer");
                 continue;
             }
             return i;
