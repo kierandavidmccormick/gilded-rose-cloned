@@ -89,8 +89,6 @@ public class SellByInfo {
                 return false;
             }
             for (int j = i + 1; j < dateRanges.length; j++) {
-                //TODO: can these be simplified
-                //TODO: this might need more test coverage
                 if (dateRanges[i].getStartDay() == dateRanges[j].getStartDay() ||
                         dateRanges[i].getStartDay() == dateRanges[j].getEndDay() ||
                         dateRanges[i].getEndDay() == dateRanges[j].getStartDay() ||
