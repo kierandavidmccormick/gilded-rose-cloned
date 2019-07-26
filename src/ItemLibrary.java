@@ -24,18 +24,17 @@ public abstract class ItemLibrary {
                             new DateRange(Integer.MIN_VALUE, 11, 1),
                             new DateRange(10, 5, 2),
                             new DateRange(4, 1, 5),
-                            new DateRange(0, Integer.MIN_VALUE, Long.MIN_VALUE)
+                            new DateRange(0, Integer.MIN_VALUE, Integer.MIN_VALUE)
                     }, 50, 0)
             );
         }
         if (itemData != null && name.matches(RegexLibrary.CONJURED)) {
             for (DateRange dateRange : itemData.getSellByInfo().getDateRanges()) {
                 if (dateRange.getQualityChange() < 0) {
-                    if (dateRange.getQualityChange() <= Long.MIN_VALUE / 2) {
-                        dateRange.setQualityChange(Long.MIN_VALUE);
+                    if (dateRange.getQualityChange() <= Integer.MIN_VALUE / 2) {
+                        dateRange.setQualityChange(Integer.MIN_VALUE);
                     } else {
-                        long l = dateRange.getQualityChange() * 2;
-                        dateRange.setQualityChange(l);
+                        dateRange.setQualityChange(Integer.MIN_VALUE);
                     }
                 }
 

@@ -15,15 +15,15 @@ public class DateRange {
         this.endDay = endDay;
     }
 
-    public long getQualityChange() {
+    public int getQualityChange() {
         return qualityChange;
     }
 
-    public void setQualityChange(long qualityChange) {
+    public void setQualityChange(int qualityChange) {
         this.qualityChange = qualityChange;
     }
 
-    public DateRange(int startDay, int endDay, long qualityChange) {
+    public DateRange(int startDay, int endDay, int qualityChange) {
         this.startDay = startDay;
         this.endDay = endDay;
         this.qualityChange = qualityChange;
@@ -31,9 +31,7 @@ public class DateRange {
 
     private int startDay;
     private int endDay;
-    //this is long to ensure that the entirety of the quality range can be reached by a single day's update
-    //TODO: this shouldn't be; fix
-    private long qualityChange;
+    private int qualityChange;
 
     @Override
     public String toString() {

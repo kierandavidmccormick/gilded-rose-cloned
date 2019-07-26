@@ -46,6 +46,9 @@ public class ItemData implements Comparable<ItemData>{
     private int itemId;
 
     public void updateItem() {
+        //TODO: refactor away all the longs; they must go
+        //instead, have changes of INT_MAX or INT_MIN set the quality to that value, and do everything in an int
+        /*
         long qualityChange = sellByInfo.getQualityChange(item.sellIn);
         long quality = item.quality;
         long longResetValue = qualityChange > 0 ? Long.MAX_VALUE : Long.MIN_VALUE;
@@ -62,6 +65,23 @@ public class ItemData implements Comparable<ItemData>{
             item.quality = sellByInfo.getMinQuality();
         } else {
             item.quality = (int)quality;
+        }
+        */
+        int qualityChange = (int)sellByInfo.getQualityChange(item.sellIn);
+
+        if (qualityChange == Integer.MAX_VALUE || qualityChange == Integer.MIN_VALUE) {
+            item.quality = qualityChange;
+        } else {
+            try {
+                item.quality = Math.addExact(item.quality, qualityChange);
+            } catch (ArithmeticException e) {
+                item.quality = qualityChange > 0 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+        }
+        if (item.quality > sellByInfo.getMaxQuality()) {
+            item.quality = sellByInfo.getMaxQuality();
+        } else if (item.quality < sellByInfo.getMinQuality()) {
+            item.quality = sellByInfo.getMinQuality();
         }
 
         if (item.sellIn != Integer.MIN_VALUE && item.sellIn != Integer.MAX_VALUE) {

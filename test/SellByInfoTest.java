@@ -23,7 +23,7 @@ class SellByInfoTest {
         DateRange dateRange1 = new DateRange(5,0, 1);
         DateRange dateRange2 = new DateRange(0,-2,-1);
         DateRange dateRange3 = new DateRange(-1, -5, Integer.MIN_VALUE);
-        //TODO: add 4th test
+
         SellByInfo sellByInfo1 = new SellByInfo(new DateRange[]{dateRange1, dateRange2}, 20, 10);
         SellByInfo sellByInfo2 = new SellByInfo(new DateRange[]{dateRange1, dateRange3}, 20, 10);
         SellByInfo sellByInfo3 = new SellByInfo(new DateRange[]{dateRange2, dateRange3}, 20, 10);

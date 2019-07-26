@@ -91,10 +91,14 @@ public class SellByInfo {
             for (int j = i + 1; j < dateRanges.length; j++) {
                 //TODO: can these be simplified
                 //TODO: this might need more test coverage
-                if (dateRanges[i].getStartDay() == dateRanges[j].getStartDay() || dateRanges[i].getStartDay() == dateRanges[j].getEndDay() || dateRanges[i].getEndDay() == dateRanges[j].getStartDay() || dateRanges[i].getEndDay() == dateRanges[j].getEndDay()) {
+                if (dateRanges[i].getStartDay() == dateRanges[j].getStartDay() ||
+                        dateRanges[i].getStartDay() == dateRanges[j].getEndDay() ||
+                        dateRanges[i].getEndDay() == dateRanges[j].getStartDay() ||
+                        dateRanges[i].getEndDay() == dateRanges[j].getEndDay()) {
                     return false;
                 }
-                if ((dateRanges[i].getEndDay() > dateRanges[j].getEndDay() && dateRanges[i].getEndDay() < dateRanges[j].getStartDay()) || (dateRanges[i].getStartDay() > dateRanges[j].getEndDay() && dateRanges[i].getStartDay() < dateRanges[j].getStartDay())) {
+                if ((dateRanges[i].getEndDay() > dateRanges[j].getEndDay() && dateRanges[i].getEndDay() < dateRanges[j].getStartDay()) ||
+                        (dateRanges[i].getStartDay() > dateRanges[j].getEndDay() && dateRanges[i].getStartDay() < dateRanges[j].getStartDay())) {
                     return false;
                 }
             }

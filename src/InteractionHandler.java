@@ -74,7 +74,6 @@ public class InteractionHandler {
         System.out.print("Please input an item name: ");
         String itemName = scanner.nextLine();
         System.out.print("Please input the number of sell by days: ");
-        //TODO: validation
         int sellByDays = getInt();
         System.out.print("Please input the quality of the item: ");
         int quality = getInt();
@@ -122,16 +121,16 @@ public class InteractionHandler {
         String intString = null;
         while (true) {
             intString = scanner.next();
-            if (intString.matches(RegexLibrary.INTMAXSTRING)) {
+            if (intString.matches(RegexLibrary.MAXVALSTRING)) {
                 return Integer.MAX_VALUE;
-            } else if (intString.matches(RegexLibrary.INTMINSTRING)) {
+            } else if (intString.matches(RegexLibrary.MINVALSTRING)) {
                 return Integer.MIN_VALUE;
             }
             int i;
             try {
                 i = Integer.parseInt(intString);
             } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid integer");
+                System.out.println("Please enter a valid number");
                 continue;
             }
             return i;
