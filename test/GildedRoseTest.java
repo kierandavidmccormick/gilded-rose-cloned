@@ -45,7 +45,7 @@ public class GildedRoseTest {
         gildedRose.addItems(Arrays.asList(sulfuras, agedBrie, conjuredAgedBrie, backstagePasses, conjuredBackstagePasses, cheese, conjuredCheese, potato));
 
         gildedRose.updateQuality();
-        assertEquals(sulfuras.getItem().sellIn > 10000, true);
+        assertEquals(sulfuras.getItem().sellIn, Integer.MAX_VALUE);
         assertEquals(sulfuras.getItem().quality, 80);
         assertEquals(agedBrie.getItem().sellIn, 4);
         assertEquals(agedBrie.getItem().quality, 11);

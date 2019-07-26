@@ -120,7 +120,7 @@ public class InteractionHandler {
     public int getInt() {
         String intString = null;
         while (true) {
-            intString = scanner.next();
+            intString = scanner.nextLine();
             if (intString.matches(RegexLibrary.MAXVALSTRING)) {
                 return Integer.MAX_VALUE;
             } else if (intString.matches(RegexLibrary.MINVALSTRING)) {

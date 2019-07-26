@@ -90,13 +90,15 @@ public class InteractionHandlerTest {
     @Test
     public void getIntTest() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "4\n-7\n99999\nINT_MAX\nInteger.MIN_VALUE\naaaaa\n14"
+                "4\n-7\n99999\nINT_MAX\nInteger.MIN_VALUE\nmaximum integer value\nmaximum-value\naaaaa\n14"
         ), gildedRose);
         assertEquals(4, interactionHandler.getInt());
         assertEquals(-7, interactionHandler.getInt());
         assertEquals(99999, interactionHandler.getInt());
         assertEquals(Integer.MAX_VALUE, interactionHandler.getInt());
         assertEquals(Integer.MIN_VALUE, interactionHandler.getInt());
+        assertEquals(Integer.MAX_VALUE, interactionHandler.getInt());
+        assertEquals(Integer.MAX_VALUE, interactionHandler.getInt());
         assertEquals(14, interactionHandler.getInt());
     }
 }
