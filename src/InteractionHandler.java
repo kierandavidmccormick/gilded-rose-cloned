@@ -59,8 +59,7 @@ public class InteractionHandler {
                 System.out.println("Please input a valid item ID");
             }
             itemId = scanner.nextInt();
-            //TODO: fix capitalization for "ID"
-            itemData = gildedRose.getItemByID(itemId);
+            itemData = gildedRose.getItemById(itemId);
             if (itemData == null) {
                 System.out.println("Please input a valid item ID");
             }
