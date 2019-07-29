@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb8c289-61a0-4ab2-bca7-4609a177e3d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GildedRose.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InteractionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InteractionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/InteractionHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/InteractionHandlerTest.java" afterDir="false" />
     </list>
@@ -22,8 +23,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/InteractionHandler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+                <state relative-caret-position="289">
+                  <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -31,8 +32,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="348">
-                  <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+                <state relative-caret-position="453">
+                  <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1512#1513#0" expanded="true" />
@@ -45,8 +46,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/InteractionHandlerTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="61">
-                  <caret line="94" selection-start-line="94" selection-end-line="94" />
+                <state relative-caret-position="552">
+                  <caret line="80" column="54" lean-forward="true" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -70,11 +71,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ItemData.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+                <state relative-caret-position="109">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
                   <folding>
                     <element signature="e#2394#2395#0" expanded="true" />
                     <element signature="e#2794#2795#0" expanded="true" />
@@ -95,7 +96,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/RegexLibrary.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
@@ -135,15 +136,15 @@
         <option value="$PROJECT_DIR$/test/PrintHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/PrintHandler.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/GildedRose.java" />
         <option value="$PROJECT_DIR$/src/DateRange.java" />
         <option value="$PROJECT_DIR$/src/ItemLibrary.java" />
         <option value="$PROJECT_DIR$/src/ItemData.java" />
         <option value="$PROJECT_DIR$/test/SellByInfoTest.java" />
         <option value="$PROJECT_DIR$/src/SellByInfo.java" />
         <option value="$PROJECT_DIR$/test/GildedRoseTest.java" />
-        <option value="$PROJECT_DIR$/src/InteractionHandler.java" />
         <option value="$PROJECT_DIR$/src/RegexLibrary.java" />
+        <option value="$PROJECT_DIR$/src/GildedRose.java" />
+        <option value="$PROJECT_DIR$/src/InteractionHandler.java" />
         <option value="$PROJECT_DIR$/test/InteractionHandlerTest.java" />
       </list>
     </option>
@@ -317,15 +318,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_gildedrose - 2019.07.29 at 10h 19m 42s.xml">
-      <configuration name="All in gildedrose" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_gildedrose - 2019.07.29 at 10h 20m 27s.xml">
-      <configuration name="All in gildedrose" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_gildedrose - 2019.07.29 at 10h 20m 42s.xml">
-      <configuration name="All in gildedrose" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_gildedrose - 2019.07.29 at 10h 21m 08s.xml">
       <configuration name="All in gildedrose" configurationId="JUnit" />
     </history-entry>
@@ -347,6 +339,15 @@
     <history-entry file="InteractionHandlerTest_addItemTestInvalidDateRange - 2019.07.29 at 10h 35m 43s.xml">
       <configuration name="InteractionHandlerTest.addItemTestInvalidDateRange" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="InteractionHandlerTest_addItemTestInvalidDateRange - 2019.07.29 at 10h 36m 53s.xml">
+      <configuration name="InteractionHandlerTest.addItemTestInvalidDateRange" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InteractionHandlerTest_addItemTestInvalidDateRange - 2019.07.29 at 10h 38m 19s.xml">
+      <configuration name="InteractionHandlerTest.addItemTestInvalidDateRange" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_gildedrose - 2019.07.29 at 10h 38m 49s.xml">
+      <configuration name="All in gildedrose" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1002" extended-state="6" />
@@ -362,8 +363,8 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32747254" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.26923078" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3791209" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.26923078" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3791209" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -379,18 +380,6 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/InteractionHandler.java</url>
-          <line>110</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -515,17 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ItemData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding>
-            <element signature="e#2394#2395#0" expanded="true" />
-            <element signature="e#2794#2795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.5.0-RC1/junit-platform-commons-1.5.0-RC1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -554,17 +532,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/ItemData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="109">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#2794#2795#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+        <state relative-caret-position="453">
+          <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1512#1513#0" expanded="true" />
@@ -573,10 +555,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/InteractionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/InteractionHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="552">
+          <caret line="80" column="54" lean-forward="true" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

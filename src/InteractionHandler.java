@@ -41,7 +41,11 @@ public class InteractionHandler {
 
     public void removeItem() {
         ItemData item = getItemBYId();
-        gildedRose.removeItem(item);
+        if (item != null) {
+            gildedRose.removeItem(item);
+        } else {
+            System.out.println("Cancelled item removal");
+        }
         gildedRose.printItems();
     }
 
@@ -50,25 +54,25 @@ public class InteractionHandler {
         if (item != null) {
             gildedRose.addItem(item);
         } else {
-            System.out.println("Cancelled Item");
+            System.out.println("Cancelled item addition");
         }
         gildedRose.printItems();
     }
 
     public ItemData getItemBYId() {
-        int itemId = -1;
+        Integer itemId = null;
         ItemData itemData = null;
         System.out.print("Input Item ID: ");
         do {
-            if (!scanner.hasNextInt()) {
-                System.out.println("Please input a valid item ID");
+            itemId = getInt();
+            if (itemId == null) {
+                return null;
             }
-            itemId = scanner.nextInt();
             itemData = gildedRose.getItemById(itemId);
             if (itemData == null) {
-                System.out.println("Please input a valid item ID");
+                System.out.println("Please input a valid item ID: ");
             }
-        } while (itemId == -1 || itemData == null);
+        } while (itemData == null);
         return itemData;
     }
 

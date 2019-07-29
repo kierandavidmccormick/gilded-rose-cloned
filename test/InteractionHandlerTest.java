@@ -73,6 +73,15 @@ public class InteractionHandlerTest {
     }
 
     @Test
+    public void cancelRemoveItemTest() {
+        interactionHandler = new InteractionHandler(new Scanner(
+                "r\nc\n"
+        ), gildedRose);
+        gildedRose.interact();
+        assertEquals(3, gildedRose.getItems().size());
+    }
+
+    @Test
     public void addItemTest() {
         interactionHandler = new InteractionHandler(new Scanner(
                 "a\nThe Item\n14\n45\n2\nINT_MAX\n1\n-2\n0\nINT_MIN\nINTEGER.MINVALUE\n50\n0\n"

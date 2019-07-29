@@ -134,7 +134,10 @@ class GildedRose {
         addItem(ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 5, 10));
     }
 
-    public ItemData getItemById(int id) {
+    public ItemData getItemById(Integer id) {
+        if (id == null) {
+            return null;
+        }
         return items.stream().filter(o -> o.getItemId() == id).findFirst().orElse(null);
     }
 }
