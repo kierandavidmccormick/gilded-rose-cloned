@@ -88,6 +88,30 @@ public class InteractionHandlerTest {
     }
 
     @Test
+    public void addItemTestInvalidDateRange() {
+        interactionHandler = new InteractionHandler(new Scanner(
+                "a\nThe Item\n1\n3\n-2\nminimum int\n1\nint max\nint min\n0\n3\n3\n"
+        ), gildedRose);
+        gildedRose.interact();
+        ItemData shouldMatch = null;
+        try {
+            shouldMatch = new ItemData("The Item", 1, 3, 3, 3, 1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        assertEquals(shouldMatch, gildedRose.getItems().get(3));
+    }
+
+    @Test
+    public void cancelAddItemTest() {
+        interactionHandler = new InteractionHandler(new Scanner(
+                "a\nThe Item\n2\n5\n2\n1\nc\n2\n2\n3\nc\nc\n"
+        ), gildedRose);
+        gildedRose.interact();
+        assertEquals(3, gildedRose.getItems().size());
+    }
+
+    @Test
     public void getIntTest() {
         interactionHandler = new InteractionHandler(new Scanner(
                 "4\n-7\n99999\nINT_MAX\nInteger.MIN_VALUE\nmaximum integer value\nmaximum-value\naaaaa\n14"

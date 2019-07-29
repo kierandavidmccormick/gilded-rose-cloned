@@ -46,7 +46,12 @@ public class InteractionHandler {
     }
 
     public void addItem() {
-        gildedRose.addItem(createItem());
+        ItemData item = createItem();
+        if (item != null) {
+            gildedRose.addItem(item);
+        } else {
+            System.out.println("Cancelled Item");
+        }
         gildedRose.printItems();
     }
 
@@ -69,40 +74,79 @@ public class InteractionHandler {
 
     public ItemData createItem() {
         scanner.nextLine();
-
         System.out.print("Please input an item name: ");
         String itemName = scanner.nextLine();
+        /*
         System.out.print("Please input the number of sell by days: ");
         int sellByDays = getInt();
         System.out.print("Please input the quality of the item: ");
         int quality = getInt();
+        */
+        //prototype of new system:
+        //can simplify the ifs
+        System.out.print("Please input the number of sell by days: ");
+        Integer sellByDays = getInt();
+        if (sellByDays == null) {
+            return null;
+        }
 
-        int dateRangesSize = 0;
-        do {
-            //TODO: make some of these messages clearer
-            //TODO: I might want a way to break out of this; if the user somehow fudges an INT_MAX or something
-            System.out.print("Please input the number of date ranges: ");
+        System.out.print("Please input the quality of the item: ");
+        Integer quality = getInt();
+        if (quality == null) {
+            return null;
+        }
+
+        System.out.print("Please input the number of date ranges: ");
+        Integer dateRangesSize = null;
+        while (true) {
             dateRangesSize = getInt();
-        } while (dateRangesSize < 0);
+            if (dateRangesSize == null) {
+                return null;
+            } else if (dateRangesSize > 0) {
+                break;
+            }
+            System.out.print("Please input a valid number of date ranges ( > 0):");
+        }
 
         DateRange[] dateRanges = new DateRange[dateRangesSize];
         SellByInfo sellByInfo;
         while (true) {
             for (int i = 0; i < dateRangesSize; i++) {
                 System.out.println("Date range " + i);
+
                 System.out.print("Enter start day: ");
-                int startDay = getInt();
+                Integer startDay = getInt();
+                if (startDay == null) {
+                    return null;
+                }
+
                 System.out.print("Enter end day: ");
-                int endDay = getInt();
+                Integer endDay = getInt();
+                if (endDay == null) {
+                    continue;
+                }
+
+
                 System.out.print("Enter quality change: ");
-                int qualityChange = getInt();
+                Integer qualityChange = getInt();
+                if (qualityChange == null) {
+                    continue;
+                }
+
                 dateRanges[i] = new DateRange(startDay, endDay, qualityChange);
             }
 
             System.out.print("Enter maximum quality: ");
-            int maxQuality = getInt();
+            Integer maxQuality = getInt();
+            if (maxQuality == null) {
+                return null;
+            }
+
             System.out.print("Enter minimum quality: ");
-            int minQuality = getInt();
+            Integer minQuality = getInt();
+            if (minQuality == null) {
+                return null;
+            }
 
             sellByInfo = new SellByInfo(dateRanges, maxQuality, minQuality);
 
@@ -116,7 +160,7 @@ public class InteractionHandler {
         return new ItemData(new Item(itemName, sellByDays, quality), sellByInfo);
     }
 
-    public int getInt() {
+    public Integer getInt() {
         String intString = null;
         while (true) {
             intString = scanner.nextLine();
@@ -124,12 +168,15 @@ public class InteractionHandler {
                 return Integer.MAX_VALUE;
             } else if (intString.matches(RegexLibrary.MINVALSTRING)) {
                 return Integer.MIN_VALUE;
+            } else if (intString.length() == 1 && Character.toUpperCase(intString.charAt(0)) == 'C') {
+                return null;
             }
             int i;
             try {
                 i = Integer.parseInt(intString);
             } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid number");
+                //TODO: ensure that this message is displayed elsewhere
+                System.out.println("Please enter a valid number, or [C] to cancel");
                 continue;
             }
             return i;
