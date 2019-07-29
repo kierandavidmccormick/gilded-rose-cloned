@@ -53,7 +53,7 @@ class GildedRose {
     }
 
     public void interact() {
-        while (interactionHandler.determineInteraction()){}
+        while (!interactionHandler.determineInteraction()){}
     }
 
     //TODO: quality changes are off-by-one (sometimes) - can probably be dealt with by changing the items

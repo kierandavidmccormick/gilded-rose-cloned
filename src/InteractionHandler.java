@@ -21,6 +21,10 @@ public class InteractionHandler {
                     return false;
                 case 'A':
                     addItem();
+                    //System.out.println("Press [N] to create new item");
+                    //System.out.println("Press [L] to add item from library");
+                    //System.out.println("Press [A] to add item to library");
+                    //TODO: unify handling of interaction messages
                     return false;
                 case 'R':
                     removeItem();
@@ -127,7 +131,7 @@ public class InteractionHandler {
                 System.out.print("Enter end day: ");
                 Integer endDay = getInt();
                 if (endDay == null) {
-                    //i--;
+                    i--;
                     continue;
                 }
 
@@ -135,7 +139,7 @@ public class InteractionHandler {
                 System.out.print("Enter quality change: ");
                 Integer qualityChange = getInt();
                 if (qualityChange == null) {
-                    //i--;
+                    i--;
                     continue;
                 }
 
@@ -181,7 +185,6 @@ public class InteractionHandler {
             try {
                 i = Integer.parseInt(intString);
             } catch (NumberFormatException e) {
-                //TODO: ensure that this message is displayed elsewhere
                 System.out.println("Please enter a valid number, or [C] to cancel");
                 continue;
             }

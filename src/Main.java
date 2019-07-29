@@ -7,7 +7,6 @@ public class Main {
         gildedRose.initItems();
         InteractionHandler interactionHandler = new InteractionHandler(new Scanner(System.in), gildedRose);
         gildedRose.printItems();
-        while (!interactionHandler.determineInteraction()) {
-        }
+        gildedRose.interact();
     }
 }

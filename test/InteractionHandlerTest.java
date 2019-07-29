@@ -16,8 +16,9 @@ public class InteractionHandlerTest {
 
     @BeforeEach
     public void beforeEach() {
-        gildedRose = spy(GildedRose.class);
-        doNothing().when(gildedRose).printItems();
+        //gildedRose = spy(GildedRose.class);
+        gildedRose = new GildedRose();
+        //doNothing().when(gildedRose).printItems();
         gildedRose.initItems();
         System.setOut(new PrintStream(new ByteArrayOutputStream()));
     }
@@ -43,7 +44,7 @@ public class InteractionHandlerTest {
     @Test
     public void removeItemTest() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "r\n1\nr\n0\nr\n2\n"
+                "r\n1\nr\n0\nr\n2\ne\n"
         ), gildedRose);
         ItemData sulfuras = gildedRose.getItems().get(0);
         ItemData conjuredAgedBrie = gildedRose.getItems().get(1);
@@ -53,19 +54,19 @@ public class InteractionHandlerTest {
         assertTrue(gildedRose.getItems().contains(conjuredAgedBrie));
         assertTrue(gildedRose.getItems().contains(backstagePasses));
 
-        gildedRose.interact();
+        interactionHandler.determineInteraction();
 
         assertTrue(gildedRose.getItems().contains(sulfuras));
         assertFalse(gildedRose.getItems().contains(conjuredAgedBrie));
         assertTrue(gildedRose.getItems().contains(backstagePasses));
 
-        gildedRose.interact();
+        interactionHandler.determineInteraction();
 
         assertFalse(gildedRose.getItems().contains(sulfuras));
         assertFalse(gildedRose.getItems().contains(conjuredAgedBrie));
         assertTrue(gildedRose.getItems().contains(backstagePasses));
 
-        gildedRose.interact();
+        interactionHandler.determineInteraction();
 
         assertFalse(gildedRose.getItems().contains(sulfuras));
         assertFalse(gildedRose.getItems().contains(conjuredAgedBrie));
@@ -75,7 +76,7 @@ public class InteractionHandlerTest {
     @Test
     public void cancelRemoveItemTest() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "r\nc\n"
+                "r\nc\ne\n"
         ), gildedRose);
         gildedRose.interact();
         assertEquals(3, gildedRose.getItems().size());
@@ -85,7 +86,7 @@ public class InteractionHandlerTest {
     @Test
     public void addItemTest() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "a\nThe Item\n14\n45\n2\nINT_MAX\n1\n-2\n0\nINT_MIN\nINTEGER.MINVALUE\n50\n0\n"
+                "a\nThe Item\n14\n45\n2\nINT_MAX\n1\n-2\n0\nINT_MIN\nINTEGER.MINVALUE\n50\n0\ne\n"
         ), gildedRose);
         gildedRose.interact();
         ItemData shouldMatch = null;
@@ -100,7 +101,7 @@ public class InteractionHandlerTest {
     @Test
     public void addItemTestInvalidDateRange() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "a\nThe Item\n1\n3\n-2\nminimum int\n1\nint max\nint min\n0\n3\n3\n"
+                "a\nThe Item\n1\n3\n-2\nminimum int\n1\nint max\nint min\n0\n3\n3\ne\n"
         ), gildedRose);
         gildedRose.interact();
         ItemData shouldMatch = null;
@@ -115,16 +116,24 @@ public class InteractionHandlerTest {
     @Test
     public void cancelAddItemTest() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "a\nThe Item\n2\n5\n2\n1\nc\n2\n2\n3\nc\nc\n"
+                "a\nThe Item\n2\n5\n2\n1\nc\n2\n3\nc\n4\n5\n6\n7\nc\nc\n" + "a\nThe Item\n14\n45\n2\nINT_MAX\n1\n-2\n0\nINT_MIN\nINTEGER.MINVALUE\n50\n0\ne\n"
         ), gildedRose);
-        gildedRose.interact();
+        interactionHandler.determineInteraction();
         assertEquals(3, gildedRose.getItems().size());
+        ItemData shouldMatch = null;
+        try {
+            shouldMatch = new ItemData("The Item", 14, 45, 50, 0, 2, Integer.MAX_VALUE, 1, -2, 0, Integer.MIN_VALUE, Integer.MIN_VALUE);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        interactionHandler.determineInteraction();
+        assertEquals(shouldMatch, gildedRose.getItems().get(3));
     }
 
     @Test
     public void getIntTest() {
         interactionHandler = new InteractionHandler(new Scanner(
-                "4\n-7\n99999\nINT_MAX\nInteger.MIN_VALUE\nmaximum integer value\nmaximum-value\naaaaa\n14"
+                "4\n-7\n99999\nINT_MAX\nInteger.MIN_VALUE\nmaximum integer value\nmaximum-value\naaaaa\n14\ne\n"
         ), gildedRose);
         assertEquals(4, interactionHandler.getInt());
         assertEquals(-7, interactionHandler.getInt());
