@@ -47,12 +47,6 @@ class GildedRose {
         return items;
     }
 
-    public  GildedRose(Collection<ItemData> items) {
-        this.items = new ArrayList<>(items);
-        printHandler = new PrintHandler(true, 78);
-        //TODO: the way that InteractionHandlers are dealt with is complex and confusing
-    }
-
     public GildedRose() {
         items = new ArrayList<>();
         printHandler = new PrintHandler(true, 78);

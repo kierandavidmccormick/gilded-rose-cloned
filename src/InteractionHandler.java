@@ -14,7 +14,7 @@ public class InteractionHandler {
     public boolean determineInteraction() {
         char c;
         while (true) {
-            c = Character.toUpperCase(scanner.next().charAt(0));
+            c = Character.toUpperCase(scanner.nextLine().charAt(0));
             switch (c) {
                 case 'D':
                     advanceDay();
@@ -77,7 +77,7 @@ public class InteractionHandler {
     }
 
     public ItemData createItem() {
-        scanner.nextLine();
+        //scanner.nextLine();
         System.out.print("Please input an item name: ");
         String itemName = scanner.nextLine();
         /*
@@ -127,6 +127,7 @@ public class InteractionHandler {
                 System.out.print("Enter end day: ");
                 Integer endDay = getInt();
                 if (endDay == null) {
+                    //i--;
                     continue;
                 }
 
@@ -134,6 +135,7 @@ public class InteractionHandler {
                 System.out.print("Enter quality change: ");
                 Integer qualityChange = getInt();
                 if (qualityChange == null) {
+                    //i--;
                     continue;
                 }
 

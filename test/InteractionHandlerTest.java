@@ -3,11 +3,11 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.*;
 
 public class InteractionHandlerTest {
 
@@ -79,6 +79,7 @@ public class InteractionHandlerTest {
         ), gildedRose);
         gildedRose.interact();
         assertEquals(3, gildedRose.getItems().size());
+
     }
 
     @Test
