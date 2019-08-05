@@ -37,79 +37,77 @@ public class GildedRoseTest {
         );
         ItemData potato = new ItemData("Eldrath, Lord of Potatoes", 10, 14, 50, 0, 1, 4, 0, -2);
 
-        //GildedRose gildedRose = new GildedRose(Arrays.asList(sulfuras, agedBrie, conjuredAgedBrie, backstagePasses, conjuredBackstagePasses, cheese, conjuredCheese, potato));
-
         GildedRose gildedRose = spy(GildedRose.class);
         doNothing().when(gildedRose).printItems();
 
         gildedRose.addItems(Arrays.asList(sulfuras, agedBrie, conjuredAgedBrie, backstagePasses, conjuredBackstagePasses, cheese, conjuredCheese, potato));
 
         gildedRose.updateQuality();
-        assertEquals(sulfuras.getItem().sellIn, Integer.MAX_VALUE);
-        assertEquals(sulfuras.getItem().quality, 80);
-        assertEquals(agedBrie.getItem().sellIn, 4);
-        assertEquals(agedBrie.getItem().quality, 11);
-        assertEquals(conjuredAgedBrie.getItem().sellIn, 4);
-        assertEquals(conjuredAgedBrie.getItem().quality, 11);
-        assertEquals(backstagePasses.getItem().sellIn, 11);
-        assertEquals(backstagePasses.getItem().quality, 10);
-        assertEquals(conjuredBackstagePasses.getItem().sellIn, 11);
-        assertEquals(conjuredBackstagePasses.getItem().quality, 10);
-        assertEquals(cheese.getItem().sellIn, 4);
-        assertEquals(cheese.getItem().quality, 14);
-        assertEquals(conjuredCheese.getItem().sellIn, 4);
-        assertEquals(conjuredCheese.getItem().quality, 13);
-        assertEquals(potato.getItem().sellIn, 9);
-        assertEquals(potato.getItem().quality, 14);
+        assertEquals(Integer.MAX_VALUE, sulfuras.getItem().sellIn);
+        assertEquals(80, sulfuras.getItem().quality);
+        assertEquals(4, agedBrie.getItem().sellIn);
+        assertEquals(11, agedBrie.getItem().quality);
+        assertEquals(4, conjuredAgedBrie.getItem().sellIn);
+        assertEquals(11, conjuredAgedBrie.getItem().quality);
+        assertEquals(11, backstagePasses.getItem().sellIn);
+        assertEquals(10, backstagePasses.getItem().quality);
+        assertEquals(11, conjuredBackstagePasses.getItem().sellIn);
+        assertEquals(10, conjuredBackstagePasses.getItem().quality);
+        assertEquals(4, cheese.getItem().sellIn);
+        assertEquals(14, cheese.getItem().quality);
+        assertEquals(4, conjuredCheese.getItem().sellIn);
+        assertEquals(13, conjuredCheese.getItem().quality);
+        assertEquals(9, potato.getItem().sellIn);
+        assertEquals(14, potato.getItem().quality);
 
         gildedRose.updateQuality();
-        assertEquals(agedBrie.getItem().sellIn, 3);
-        assertEquals(backstagePasses.getItem().quality, 10);
-        assertEquals(conjuredBackstagePasses.getItem().quality, 10);
+        assertEquals(3, agedBrie.getItem().sellIn);
+        assertEquals(10, backstagePasses.getItem().quality);
+        assertEquals(10, conjuredBackstagePasses.getItem().quality);
 
         gildedRose.updateQuality();
-        assertEquals(agedBrie.getItem().sellIn, 2);
-        assertEquals(backstagePasses.getItem().quality, 12);
-        assertEquals(conjuredBackstagePasses.getItem().quality, 12);
+        assertEquals(2, agedBrie.getItem().sellIn);
+        assertEquals(12, backstagePasses.getItem().quality);
+        assertEquals(12, conjuredBackstagePasses.getItem().quality);
 
         gildedRose.updateQuality();
 
         gildedRose.updateQuality();
-        assertEquals(cheese.getItem().quality, 10);
-        assertEquals(conjuredCheese.getItem().quality, 5);
+        assertEquals(10, cheese.getItem().quality);
+        assertEquals(5, conjuredCheese.getItem().quality);
 
         gildedRose.updateQuality();
-        assertEquals(cheese.getItem().quality, 8);
-        assertEquals(conjuredCheese.getItem().quality, 1);
-        assertEquals(potato.getItem().sellIn, 4);
-        assertEquals(potato.getItem().quality, 14);
+        assertEquals(8, cheese.getItem().quality);
+        assertEquals(1, conjuredCheese.getItem().quality);
+        assertEquals(4, potato.getItem().sellIn);
+        assertEquals(14, potato.getItem().quality);
 
         gildedRose.updateQuality();
-        assertEquals(backstagePasses.getItem().sellIn, 5);
-        assertEquals(backstagePasses.getItem().quality, 20);
-        assertEquals(conjuredBackstagePasses.getItem().quality, 20);
-        assertEquals(conjuredCheese.getItem().quality, 0);
-        assertEquals(potato.getItem().quality, 12);
+        assertEquals(5, backstagePasses.getItem().sellIn);
+        assertEquals(20, backstagePasses.getItem().quality);
+        assertEquals(20, conjuredBackstagePasses.getItem().quality);
+        assertEquals(0, conjuredCheese.getItem().quality);
+        assertEquals(12, potato.getItem().quality);
 
         gildedRose.updateQuality();
-        assertEquals(backstagePasses.getItem().quality, 22);
-        assertEquals(conjuredBackstagePasses.getItem().quality, 22);
-
-        gildedRose.updateQuality();
+        assertEquals(23, backstagePasses.getItem().quality);
+        assertEquals(23, conjuredBackstagePasses.getItem().quality);
 
         gildedRose.updateQuality();
 
         gildedRose.updateQuality();
 
         gildedRose.updateQuality();
-        assertEquals(backstagePasses.getItem().sellIn, 0);
-        assertEquals(backstagePasses.getItem().quality, 42);
-        assertEquals(conjuredBackstagePasses.getItem().quality, 42);
+
+        gildedRose.updateQuality();
+        assertEquals(0, backstagePasses.getItem().sellIn);
+        assertEquals(35, backstagePasses.getItem().quality);
+        assertEquals(35, conjuredBackstagePasses.getItem().quality);
 
         gildedRose.updateQuality();
 
-        assertEquals(backstagePasses.getItem().quality, 0);
-        assertEquals(conjuredBackstagePasses.getItem().quality, 0);
+        assertEquals(0, backstagePasses.getItem().quality);
+        assertEquals(0, conjuredBackstagePasses.getItem().quality);
     }
 
 }

@@ -21,10 +21,6 @@ public class InteractionHandler {
                     return false;
                 case 'A':
                     addItem();
-                    //System.out.println("Press [N] to create new item");
-                    //System.out.println("Press [L] to add item from library");
-                    //System.out.println("Press [A] to add item to library");
-                    //TODO: unify handling of interaction messages
                     return false;
                 case 'R':
                     removeItem();
@@ -81,17 +77,9 @@ public class InteractionHandler {
     }
 
     public ItemData createItem() {
-        //scanner.nextLine();
         System.out.print("Please input an item name: ");
         String itemName = scanner.nextLine();
-        /*
-        System.out.print("Please input the number of sell by days: ");
-        int sellByDays = getInt();
-        System.out.print("Please input the quality of the item: ");
-        int quality = getInt();
-        */
-        //prototype of new system:
-        //can simplify the ifs
+
         System.out.print("Please input the number of sell by days: ");
         Integer sellByDays = getInt();
         if (sellByDays == null) {
@@ -134,7 +122,6 @@ public class InteractionHandler {
                     i--;
                     continue;
                 }
-
 
                 System.out.print("Enter quality change: ");
                 Integer qualityChange = getInt();

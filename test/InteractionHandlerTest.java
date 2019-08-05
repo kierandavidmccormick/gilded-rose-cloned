@@ -3,11 +3,9 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 public class InteractionHandlerTest {
 
@@ -16,9 +14,7 @@ public class InteractionHandlerTest {
 
     @BeforeEach
     public void beforeEach() {
-        //gildedRose = spy(GildedRose.class);
         gildedRose = new GildedRose();
-        //doNothing().when(gildedRose).printItems();
         gildedRose.initItems();
         System.setOut(new PrintStream(new ByteArrayOutputStream()));
     }
@@ -34,7 +30,7 @@ public class InteractionHandlerTest {
 
         ItemData sulfuras = ItemLibrary.getNamedItemData("Sulfuras, Hand of Ragnaros", 10, 80);
         ItemData conjuredAgedBrie = ItemLibrary.getNamedItemData("Conjured Aged Brie", 0, 13);
-        ItemData backstagePasses = ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 2, 22);
+        ItemData backstagePasses = ItemLibrary.getNamedItemData("Backstage Passes to a boring concert", 2, 19);
 
         assertEquals(sulfuras, gildedRose.getItems().get(0));
         assertEquals(conjuredAgedBrie, gildedRose.getItems().get(1));

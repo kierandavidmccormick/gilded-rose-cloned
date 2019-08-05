@@ -22,8 +22,8 @@ public abstract class ItemLibrary {
                     new Item(name, sellByDays, baseQuality),
                     new SellByInfo(new DateRange[]{
                             new DateRange(Integer.MIN_VALUE, 11, 1),
-                            new DateRange(10, 5, 2),
-                            new DateRange(4, 1, 5),
+                            new DateRange(10, 6, 2),
+                            new DateRange(5, 1, 3),
                             new DateRange(0, Integer.MIN_VALUE, Integer.MIN_VALUE)
                     }, 50, 0)
             );

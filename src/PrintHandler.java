@@ -1,8 +1,9 @@
 import java.util.Collection;
+
 import org.apache.commons.lang3.StringUtils;
 
 public class PrintHandler {
-    public boolean isShowItemIds() {
+    public boolean getShowItemIds() {
         return showItemIds;
     }
 
@@ -23,7 +24,6 @@ public class PrintHandler {
         this.screenWidth = screenWidth;
     }
 
-    //TODO: this never gets used - add a use or eliminate
     public boolean showItemIds;
     public int screenWidth;
 
@@ -120,7 +120,7 @@ public class PrintHandler {
             if (width > 4) {
                 outString.append(StringUtils.abbreviate(s, width));
             } else if (width > 1) {
-                outString.append(s.substring(0, width));
+                outString.append(s, 0, width);
             }
         } else {
             outString.append(s).append(genChars(' ', width - s.length()));

@@ -3,13 +3,6 @@ import java.util.Collection;
 import java.util.Collections;
 
 class GildedRose {
-    /*
-    Item[] items;
-
-    public GildedRose(Item[] items) {
-        this.items = items;
-    }
-     */
     private ArrayList<ItemData> items;
     private int itemId = 0;
     private PrintHandler printHandler;
@@ -56,7 +49,6 @@ class GildedRose {
         while (!interactionHandler.determineInteraction()){}
     }
 
-    //TODO: quality changes are off-by-one (sometimes) - can probably be dealt with by changing the items
     public void updateQuality() {
         /*
         for (int i = 0; i < items.length; i++) {
