@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfb8c289-61a0-4ab2-bca7-4609a177e3d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gildedrose/GildedRose.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gildedrose/GildedRose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gildedrose/InteractionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gildedrose/InteractionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gildedrose/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gildedrose/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gildedrose/PrintHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gildedrose/PrintHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/gildedrose/InteractionHandlerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/gildedrose/InteractionHandlerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InteractionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InteractionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrintHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrintHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegexLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegexLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GildedRoseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/InteractionHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/InteractionHandlerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="dfb8c289-61a0-4ab2-bca7-4609a177e3d3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InteractionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1911">
-              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="1210">
+              <caret line="160" column="32" lean-forward="true" selection-start-line="160" selection-start-column="32" selection-end-line="160" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -123,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1002" />
@@ -340,7 +324,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32747254" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.2791209" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.2791209" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3791209" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -570,8 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InteractionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1911">
-          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="1210">
+          <caret line="160" column="32" lean-forward="true" selection-start-line="160" selection-start-column="32" selection-end-line="160" selection-end-column="32" />
         </state>
       </provider>
     </entry>
